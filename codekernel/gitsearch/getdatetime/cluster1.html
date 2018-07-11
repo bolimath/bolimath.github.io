@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/SecurityGroupUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/SecurityGroupUsageParser.java</a></p>Centrality&darr;:7.96199547323883&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SecurityGroupUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">7</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">sgCreate<em>date</em>.after</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//Ignore&nbsp;records&nbsp;created&nbsp;after&nbsp;end<em>date</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>continue</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">currentDuration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">sgDelete<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;sgCreate<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;make&nbsp;sure&nbsp;this&nbsp;is&nbsp;an&nbsp;inclusive&nbsp;check&nbsp;for&nbsp;milliseconds&nbsp;(i.e.&nbsp;use&nbsp;n&nbsp;-&nbsp;m&nbsp;+&nbsp;1&nbsp;to&nbsp;find&nbsp;total&nbsp;number&nbsp;of&nbsp;millis&nbsp;to&nbsp;charge)</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/PortForwardingUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/PortForwardingUsageParser.java</a></p>Centrality&darr;:7.961994044438142&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">PortForwardingUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">pfCreate<em>date</em>.after</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//Ignore&nbsp;records&nbsp;created&nbsp;after&nbsp;end<em>date</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>continue</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">currentDuration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">pfDelete<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;pfCreate<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;make&nbsp;sure&nbsp;this&nbsp;is&nbsp;an&nbsp;inclusive&nbsp;check&nbsp;for&nbsp;milliseconds&nbsp;(i.e.&nbsp;use&nbsp;n&nbsp;-&nbsp;m&nbsp;+&nbsp;1&nbsp;to&nbsp;find&nbsp;total&nbsp;number&nbsp;of&nbsp;millis&nbsp;to&nbsp;charge)</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VolumeUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VolumeUsageParser.java</a></p>Centrality&darr;:7.961994044438142&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">VolumeUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">volCreate<em>date</em>.after</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//Ignore&nbsp;records&nbsp;created&nbsp;after&nbsp;end<em>date</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>continue</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">currentDuration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">volDelete<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;volCreate<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;make&nbsp;sure&nbsp;this&nbsp;is&nbsp;an&nbsp;inclusive&nbsp;check&nbsp;for&nbsp;milliseconds&nbsp;(i.e.&nbsp;use&nbsp;n&nbsp;-&nbsp;m&nbsp;+&nbsp;1&nbsp;to&nbsp;find&nbsp;total&nbsp;number&nbsp;of&nbsp;millis&nbsp;to&nbsp;charge)</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/NetworkOfferingUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/NetworkOfferingUsageParser.java</a></p>Centrality&darr;:7.960425745426343&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">NetworkOfferingUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">6</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">noCreate<em>date</em>.after</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//Ignore&nbsp;records&nbsp;created&nbsp;after&nbsp;end<em>date</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>continue</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">currentDuration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">noDelete<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;noCreate<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;make&nbsp;sure&nbsp;this&nbsp;is&nbsp;an&nbsp;inclusive&nbsp;check&nbsp;for&nbsp;milliseconds&nbsp;(i.e.&nbsp;use&nbsp;n&nbsp;-&nbsp;m&nbsp;+&nbsp;1&nbsp;to&nbsp;find&nbsp;total&nbsp;number&nbsp;of&nbsp;millis&nbsp;to&nbsp;charge)</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/tomcat80/blob/40451112ede5e054118f4c5cccc869727f33e2f4/modules/tomcat-lite/test/org/apache/tomcat/test/watchdog/HttpCookie.java>https://github.com/apache/tomcat80/blob/40451112ede5e054118f4c5cccc869727f33e2f4/modules/tomcat-lite/test/org/apache/tomcat/test/watchdog/HttpCookie.java</a></p>Centrality&darr;:7.839407216334177&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">HttpCookie.hasExpired</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>if</b></font><font color="#000000">(</font><font color="#000000">expiration<em>date</em>&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">(</font><font color="#000000">expiration<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">&lt;=&nbsp;System.current<em>time</em>Millis</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/tomcat55/blob/238168ffd2f5495e20e160991ac847ffbdc09fd8/container/catalina/src/share/org/apache/catalina/util/FastDateFormat.java>https://github.com/apache/tomcat55/blob/238168ffd2f5495e20e160991ac847ffbdc09fd8/container/catalina/src/share/org/apache/catalina/util/FastDateFormat.java</a></p>Centrality&darr;:7.839407216334177&nbsp; Specificity&uarr;:0.1353352832366127<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Fast<em>date</em>Format.format</font><font color="#000000">(</font><font color="#000000"><em>date</em>&nbsp;<em>date</em>,StringBuffer&nbsp;toAppendTo,FieldPosition&nbsp;fieldPosition</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">dt&nbsp;=&nbsp;<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">ds&nbsp;!=&nbsp;lastSec</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.setLength</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">df.format</font><font color="#000000">(</font><font color="#000000"><em>date</em>,&nbsp;sb,&nbsp;fp</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">lastSec&nbsp;=&nbsp;ds;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;</b></font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;munge&nbsp;current&nbsp;msec&nbsp;into&nbsp;existing&nbsp;string</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">ms&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#7f0055"><b>int</b></font><font color="#000000">)(</font><font color="#000000">dt&nbsp;%&nbsp;</font><font color="#990000">1000</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">pos&nbsp;=&nbsp;fp.<em>get</em>EndIndex</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">begin&nbsp;=&nbsp;fp.<em>get</em>BeginIndex</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">pos&nbsp;&gt;&nbsp;</font><font color="#990000">0</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">pos&nbsp;&gt;&nbsp;begin</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.setCharAt</font><font color="#000000">(</font><font color="#000000">--pos,&nbsp;Character.forDigit</font><font color="#000000">(</font><font color="#000000">ms&nbsp;%&nbsp;</font><font color="#990000">10</font><font color="#000000">,&nbsp;</font><font color="#990000">10</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ms&nbsp;/=&nbsp;</font><font color="#990000">10</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">pos&nbsp;&gt;&nbsp;begin</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.setCharAt</font><font color="#000000">(</font><font color="#000000">--pos,&nbsp;Character.forDigit</font><font color="#000000">(</font><font color="#000000">ms&nbsp;%&nbsp;</font><font color="#990000">10</font><font color="#000000">,&nbsp;</font><font color="#990000">10</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ms&nbsp;/=&nbsp;</font><font color="#990000">10</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">pos&nbsp;&gt;&nbsp;begin</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sb.setCharAt</font><font color="#000000">(</font><font color="#000000">--pos,&nbsp;Character.forDigit</font><font color="#000000">(</font><font color="#000000">ms&nbsp;%&nbsp;</font><font color="#990000">10</font><font color="#000000">,&nbsp;</font><font color="#990000">10</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/syncope/blob/8cc3ffc1feba36af7414c380b6ac833662b58f73/common/lib/src/main/java/org/apache/syncope/common/lib/to/AbstractAnnotatedBean.java>https://github.com/apache/syncope/blob/8cc3ffc1feba36af7414c380b6ac833662b58f73/common/lib/src/main/java/org/apache/syncope/common/lib/to/AbstractAnnotatedBean.java</a></p>Centrality&darr;:7.9555521621684475&nbsp; Specificity&uarr;:1.3743088899875524<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">AbstractAnnotatedBean.<em>get</em>ETagValue</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;etag<em>date</em>&nbsp;=&nbsp;<em>get</em>LastChange<em>date</em></font><font color="#000000">()&nbsp;</font><font color="#000000">==&nbsp;</font><font color="#7f0055"><b>null</b></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">?&nbsp;<em>get</em>Creation<em>date</em></font><font color="#000000">()&nbsp;</font><font color="#000000">:&nbsp;<em>get</em>LastChange<em>date</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">etag<em>date</em>&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">?&nbsp;StringUtils.EMPTY</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">:&nbsp;String.valueOf</font><font color="#000000">(</font><font color="#000000">etag<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/geronimo/blob/9836399660856485440d747c74d8c69875c77a89/modules/timer/src/java/org/apache/geronimo/timer/ThreadPooledTimer.java>https://github.com/apache/geronimo/blob/9836399660856485440d747c74d8c69875c77a89/modules/timer/src/java/org/apache/geronimo/timer/ThreadPooledTimer.java</a></p>Centrality&darr;:7.9974357772443705&nbsp; Specificity&uarr;:2.710491371436709<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ThreadPooled<em>time</em>r.schedule</font><font color="#000000">(</font><font color="#000000">String&nbsp;key,UserTaskFactory&nbsp;userTaskFactory,Object&nbsp;userId,Object&nbsp;userInfo,<em>date</em>&nbsp;<em>time</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000"><em>time</em>&nbsp;==</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IllegalArgumentException</font><font color="#000000">(</font><font color="#2a00ff">&#34;No&nbsp;<em>time</em>&nbsp;supplied&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000"><em>time</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">&lt;&nbsp;</font><font color="#990000">0</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IllegalArgumentException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Negative&nbsp;<em>time</em>:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;<em>time</em>.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VMSnapshotUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VMSnapshotUsageParser.java</a></p>Centrality&darr;:7.959424709730167&nbsp; Specificity&uarr;:3.6787944117144233<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">VMSnapshotUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">5</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">previousEvent.setProcessed</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">s_usageVMSnapshotDao.up<em>date</em></font><font color="#000000">(</font><font color="#000000">previousEvent</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">duration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">end<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;created.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

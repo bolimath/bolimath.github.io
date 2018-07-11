@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/security/ssl/TestEncryptedShuffle.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/security/ssl/TestEncryptedShuffle.java</a></p>Centrality&darr;:3.999983271863637&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestEncryptedShuffle.encryptedShuffleWithCerts</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">useClientCerts</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">6</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;input<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#2a00ff">&#34;input&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">input<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data.txt&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;hello&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/lib/input/TestLineRecordReaderJobs.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/lib/input/TestLineRecordReaderJobs.java</a></p>Centrality&darr;:3.999947634568222&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestLineRecordReaderJobs.<em>create</em>InputFile</font><font color="#000000">(</font><font color="#000000">Configuration&nbsp;conf</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;file&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;test.txt&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Writer&nbsp;writer&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">localFs.<em>create</em></font><font color="#000000">(</font><font color="#000000">file</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;abc\ndef\t\nghi\njkl&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/sharelib/streaming/src/test/java/org/apache/oozie/action/hadoop/TestStreamingMain.java>https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/sharelib/streaming/src/test/java/org/apache/oozie/action/hadoop/TestStreamingMain.java</a></p>Centrality&darr;:3.99999771323502&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestStreamingMain.call</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">5</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;getFileSystem</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;input<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">getFsTestCase<em>dir</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;input&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">input<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Writer&nbsp;writer&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data.txt&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;hello&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/action/hadoop/TestDistcpMain.java>https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/action/hadoop/TestDistcpMain.java</a></p>Centrality&darr;:3.999983271863637&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestDistcpMain.call</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;getFileSystem</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;input<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">getFsTestCase<em>dir</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;input&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">input<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Writer&nbsp;writer&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data.txt&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;hello&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/action/hadoop/TestMapReduceMain.java>https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/action/hadoop/TestMapReduceMain.java</a></p>Centrality&darr;:3.9999832526092707&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMapReduceMain.call</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;getFileSystem</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;input<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">getFsTestCase<em>dir</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;input&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">input<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Writer&nbsp;writer&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data.txt&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;hello&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

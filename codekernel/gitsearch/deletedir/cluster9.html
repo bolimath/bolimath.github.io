@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ExplodedComponentInstallationTest.java>https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ExplodedComponentInstallationTest.java</a></p>Centrality&darr;:10.990645342265195&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ExplodedComponentInstallationTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ComponentAssemblyInstallationTest.java>https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ComponentAssemblyInstallationTest.java</a></p>Centrality&darr;:10.990645342264376&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ComponentAssemblyInstallationTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ComponentInstallationTest.java>https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ComponentInstallationTest.java</a></p>Centrality&darr;:10.990566830788048&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ComponentInstallationTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/engines/servicemix-camel/src/test/java/org/apache/servicemix/camel/NonJbiCamelEndpointsIntegrationTest.java>https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/engines/servicemix-camel/src/test/java/org/apache/servicemix/camel/NonJbiCamelEndpointsIntegrationTest.java</a></p>Centrality&darr;:10.990645342189158&nbsp; Specificity&uarr;:0.8710941655794974<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">NonJbiCamelEndpointsIntegrationTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/engines/servicemix-camel/src/test/java/org/apache/servicemix/camel/SpringJbiTestSupport.java>https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/engines/servicemix-camel/src/test/java/org/apache/servicemix/camel/SpringJbiTestSupport.java</a></p>Centrality&darr;:10.992299944534171&nbsp; Specificity&uarr;:2.710491371436709<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SpringJbiTestSupport.configureContainer</font><font color="#000000">(</font><font color="#000000">JBIContainer&nbsp;container</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">logger.info</font><font color="#000000">(</font><font color="#2a00ff">&#34;Using&nbsp;temporary&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[{}]&#34;</font><font color="#000000">,&nbsp;tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-lwcontainer/src/test/java/org/servicemix/lwcontainer/LwContainerComponentTest.java>https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-lwcontainer/src/test/java/org/servicemix/lwcontainer/LwContainerComponentTest.java</a></p>Centrality&darr;:10.990566830787552&nbsp; Specificity&uarr;:2.5751560882000963<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">LwContainerComponentTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;create&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/camel/blob/b378bcdedfbd0ac375d052ca4dccdbad6bed1ce9/components/camel-kafka/src/test/java/org/apache/camel/component/kafka/embedded/TestUtils.java>https://github.com/apache/camel/blob/b378bcdedfbd0ac375d052ca4dccdbad6bed1ce9/components/camel-kafka/src/test/java/org/apache/camel/component/kafka/embedded/TestUtils.java</a></p>Centrality&darr;:10.81260692901052&nbsp; Specificity&uarr;:1.8393972058572117<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestUtils.constructTemp<em>dir</em></font><font color="#000000">(</font><font color="#000000">String&nbsp;<em>dir</em>Prefix</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;file&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">System.getProperty</font><font color="#000000">(</font><font color="#2a00ff">&#34;java.io.tmp<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;<em>dir</em>Prefix&nbsp;+&nbsp;RANDOM.nextInt</font><font color="#000000">(</font><font color="#990000">10000000</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!file.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">RuntimeException</font><font color="#000000">(</font><font color="#2a00ff">&#34;could&nbsp;not&nbsp;create&nbsp;temp&nbsp;<em>dir</em>ectory:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;file.getAbsolutePath</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.<em>delete</em>OnExit</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/helix/blob/acd902e2433f65e9864ccf49fcd1a04c36b1f206/recipes/rsync-replicated-file-system/src/main/java/org/apache/helix/filestore/CheckpointFile.java>https://github.com/apache/helix/blob/acd902e2433f65e9864ccf49fcd1a04c36b1f206/recipes/rsync-replicated-file-system/src/main/java/org/apache/helix/filestore/CheckpointFile.java</a></p>Centrality&darr;:10.795991644248808&nbsp; Specificity&uarr;:0.8710941655794974<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">CheckpointFile.CheckpointFile</font><font color="#000000">(</font><font color="#000000">String&nbsp;checkpoint<em>dir</em>Path</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;checkpoint<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">checkpoint<em>dir</em>Path</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!checkpoint<em>dir</em>.exists</font><font color="#000000">()&nbsp;</font><font color="#000000">&amp;&amp;&nbsp;!checkpoint<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;unable&nbsp;to&nbsp;create&nbsp;SCN&nbsp;file&nbsp;parent:&#34;&nbsp;</font><font color="#000000">+&nbsp;checkpoint<em>dir</em>.getAbsolutePath</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/test/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/linux/resources/TestCGroupsHandlerImpl.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-nodemanager/src/test/java/org/apache/hadoop/yarn/server/nodemanager/containermanager/linux/resources/TestCGroupsHandlerImpl.java</a></p>Centrality&darr;:10.92837164124774&nbsp; Specificity&uarr;:0.8710941655794974<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestCGroupsHandlerImpl.createMockCgroupMount</font><font color="#000000">(</font><font color="#000000">File&nbsp;parent<em>dir</em>,String&nbsp;type,String&nbsp;hierarchy</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">parent<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">,&nbsp;type&nbsp;+&nbsp;</font><font color="#2a00ff">&#34;/&#34;&nbsp;</font><font color="#000000">+&nbsp;hierarchy</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileUtils.<em>delete</em>Quietly</font><font color="#000000">(</font><font color="#000000">cgroupMount<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!cgroupMount<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;message&nbsp;=</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;Could&nbsp;not&nbsp;create&nbsp;<em>dir</em>&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;cgroupMount<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#000000">message</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/geronimo/blob/9836399660856485440d747c74d8c69875c77a89/modules/timer/src/test/org/apache/geronimo/timer/jdbc/DerbyJDBCWorkerPersistenceTest.java>https://github.com/apache/geronimo/blob/9836399660856485440d747c74d8c69875c77a89/modules/timer/src/test/org/apache/geronimo/timer/jdbc/DerbyJDBCWorkerPersistenceTest.java</a></p>Centrality&darr;:10.84501884159288&nbsp; Specificity&uarr;:1.8393972058572117<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">DerbyJDBCWorkerPersistenceTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">system<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;derbyTest&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;.tmp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">system<em>dir</em>.<em>delete</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">system<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>delete</em></font><font color="#000000">(</font><font color="#000000">system<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;derby&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">system<em>dir</em>,&nbsp;derby<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.setProperty</font><font color="#000000">(</font><font color="#000000">SYSTEM_HOME,&nbsp;derby.getAbsolutePath</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/flink/blob/572a45b379ca2231d772db4f115749fa08afcd10/flink-core/src/test/java/org/apache/flink/api/common/io/EnumerateNestedFilesTest.java>https://github.com/apache/flink/blob/572a45b379ca2231d772db4f115749fa08afcd10/flink-core/src/test/java/org/apache/flink/api/common/io/EnumerateNestedFilesTest.java</a></p>Centrality&darr;:10.764028845803614&nbsp; Specificity&uarr;:1.3743088899875524<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">EnumerateNestedFilesTest.testGetStatisticsOneFileInNested<em>dir</em></font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;insideNested<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempPath&nbsp;+&nbsp;System.getProperty</font><font color="#000000">(</font><font color="#2a00ff">&#34;file.separator&#34;</font><font color="#000000">)&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;firstLevel<em>dir</em>&nbsp;+&nbsp;System.getProperty</font><font color="#000000">(</font><font color="#2a00ff">&#34;file.separator&#34;</font><font color="#000000">)&nbsp;</font><font color="#000000">+&nbsp;secondLevel<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">insideNested<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">insideNested<em>dir</em>.<em>delete</em>OnExit</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">TestFileUtils.createTempFileIn<em>dir</em>ectory</font><font color="#000000">(</font><font color="#000000">insideNested<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">,&nbsp;SIZE</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/felix/blob/bffb01c2e4d8c21cd6d72d4d6e8cdaf4711c0972/framework/src/test/java/org/apache/felix/framework/PackageAdminImplTest.java>https://github.com/apache/felix/blob/bffb01c2e4d8c21cd6d72d4d6e8cdaf4711c0972/framework/src/test/java/org/apache/felix/framework/PackageAdminImplTest.java</a></p>Centrality&darr;:10.50130064775112&nbsp; Specificity&uarr;:2.5751560882000963<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">PackageAdminImplTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">temp<em>dir</em>&nbsp;=&nbsp;File.createTempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;felix-temp&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;.<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">&#34;precondition&#34;</font><font color="#000000">,&nbsp;temp<em>dir</em>.<em>delete</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">&#34;precondition&#34;</font><font color="#000000">,&nbsp;temp<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cache<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">temp<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;felix-cache&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertTrue</font><font color="#000000">(</font><font color="#2a00ff">&#34;precondition&#34;</font><font color="#000000">,&nbsp;cache<em>dir</em>.mk<em>dir</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

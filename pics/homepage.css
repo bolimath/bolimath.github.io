@@ -1,0 +1,123 @@
+.STYLE2 {
+    font-size: 36px
+}
+
+.STYLE6 {
+    font-size: 18px
+}
+
+.STYLE8 {
+    font-size: 16px;
+}
+
+.STYLE11 {
+    font-size: 17px
+}
+
+.STYLE19 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.STYLE20 {
+    font-size: 22px
+}
+
+.STYLE23 {
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.span-out {width: 100%;}
+.span-24 {width: 940px;}
+
+body {
+    /*font-family: arial, sans-serif;*/
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    background-color: #EEEEEE;
+}
+
+div.body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 120%;
+    margin: 0px auto 0px auto;
+    padding: 1% 2% 1% 2%;
+    background-color: #ffffff;
+    border: 2px solid #999;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #BBB;
+}
+
+
+div.banner {
+    display: block;
+    background-color: #edeafd;
+    color: rgba(12, 0, 129, 0.86);
+    text-align: right;
+    padding-left: 0.5em;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.intro {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-olor: #ffffff;
+}
+
+div.infobox {
+	margin-top: 10px;
+	margin-left: 360px;
+	margin-bottom: 20px;
+	width: 450px;
+	font-size: 110%;
+	border: 2px solid #999;
+	border-radius: 5px;
+}
+
+div.bio {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ffffff;
+}
+
+div.news {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: #ffffff;
+}
+
+
+div.content {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+}
+
+
+h3.proj_title {
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-shadow: none;
+    border-bottom: 1px dotted #999;
+}
+
+a.normal {
+
+}
+
+a:hover {
+    color: #0069ba;
+    text-shadow: #0090ff 0px 0px 2px;
+    #border-bottom-style: solid;
+}

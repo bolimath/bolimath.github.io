@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-sandbox/blob/44a5fef3bfa8536e8279616d99ddb69a020eb144/jxr/maven-jxr/maven-jxr-java/src/main/java/org/apache/maven/jxr/java/src/GenerateHTMLJavaSrc.java>https://github.com/apache/maven-sandbox/blob/44a5fef3bfa8536e8279616d99ddb69a020eb144/jxr/maven-jxr/maven-jxr-java/src/main/java/org/apache/maven/jxr/java/src/GenerateHTMLJavaSrc.java</a>[from <a href="createdir\cluster0.html">50 instances</a>]</p>Centrality&darr;:48.84935125302506&nbsp; Specificity&uarr;:6.709252558050237E-4
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">GenerateHTMLJavaSrc.setDest<em>dir</em></font><font color="#000000">(</font><font color="#000000">File&nbsp;dest<em>dir</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">!dest<em>dir</em>.exists</font><font color="#000000">()&nbsp;</font><font color="#000000">&amp;&amp;&nbsp;!dest<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">()&nbsp;)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;Cannot&nbsp;<em>create</em>&nbsp;the&nbsp;dest&nbsp;<em>dir</em>ectory.&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">getOptions</font><font color="#000000">()</font><font color="#000000">.setDest<em>dir</em></font><font color="#000000">(&nbsp;</font><font color="#000000">dest<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/solr/core/src/test/org/apache/solr/schema/TestBinaryField.java>https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/solr/core/src/test/org/apache/solr/schema/TestBinaryField.java</a>[from <a href="createdir\cluster1.html">27 instances</a>]</p>Centrality&darr;:25.990796997442626&nbsp; Specificity&uarr;:0.503214724408055
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestBinaryField.beforeTest</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;home<em>dir</em>&nbsp;=&nbsp;<em>create</em>Temp<em>dir</em></font><font color="#000000">()</font><font color="#000000">.toFile</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;coll<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">home<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;collection1&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;data<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">coll<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;conf<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">coll<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;conf&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/ignite/blob/f9fe99963fd3defab639e9700dffc965cdd39bb1/modules/hadoop/src/test/java/org/apache/ignite/igfs/HadoopIgfs20FileSystemAbstractSelfTest.java>https://github.com/apache/ignite/blob/f9fe99963fd3defab639e9700dffc965cdd39bb1/modules/hadoop/src/test/java/org/apache/ignite/igfs/HadoopIgfs20FileSystemAbstractSelfTest.java</a>[from <a href="createdir\cluster2.html">17 instances</a>]</p>Centrality&darr;:15.992782920738408&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">HadoopIgfs20FileSystemAbstractSelfTest.test<em>create</em>CheckOverwrite</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;fsHome&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">primaryFsUri</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">fsHome,&nbsp;</font><font color="#2a00ff">&#34;/some<em>dir</em>1/some<em>dir</em>2/some<em>dir</em>3&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Path&nbsp;file&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000"><em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;someFile&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/incubator-geode/blob/a3ec2ecf48b8feb1721739f5532e0ecbb278ca49/gemfire-core/src/main/java/com/gemstone/gemfire/distributed/internal/SharedConfiguration.java>https://github.com/apache/incubator-geode/blob/a3ec2ecf48b8feb1721739f5532e0ecbb278ca49/gemfire-core/src/main/java/com/gemstone/gemfire/distributed/internal/SharedConfiguration.java</a>[from <a href="createdir\cluster3.html">16 instances</a>]</p>Centrality&darr;:14.9916319109538&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SharedConfiguration.getConfigurationRegion</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;disk<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">CONFIG_DISK_<em>dir</em>_PATH</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!disk<em>dir</em>.exists</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!disk<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Cannot&nbsp;<em>create</em>&nbsp;<em>dir</em>ectory&nbsp;at&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;CONFIG_DISK_<em>dir</em>_PATH</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestMiniMRClasspath.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapred/TestMiniMRClasspath.java</a>[from <a href="createdir\cluster4.html">10 instances</a>]</p>Centrality&darr;:8.99908486740527&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMiniMRClasspath.configureWordCount</font><font color="#000000">(</font><font color="#000000">FileSystem&nbsp;fs,JobConf&nbsp;conf,String&nbsp;input,int&nbsp;numMaps,int&nbsp;numReduces,Path&nbsp;in<em>dir</em>,Path&nbsp;out<em>dir</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.delete</font><font color="#000000">(</font><font color="#000000">out<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;<em>create</em>&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">DataOutputStream&nbsp;file&nbsp;=&nbsp;fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">in<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;part-0&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.writeBytes</font><font color="#000000">(</font><font color="#000000">input</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/ant/src/org/apache/hadoop/hive/ant/QTestGenTask.java>https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/ant/src/org/apache/hadoop/hive/ant/QTestGenTask.java</a>[from <a href="createdir\cluster5.html">8 instances</a>]</p>Centrality&darr;:6.995922503591727&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">QTestGenTask.execute</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">13</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">out<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">output<em>dir</em>ectory</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!out<em>dir</em>.exists</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">out<em>dir</em>.mk<em>dir</em>s</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/testutils/ptest2/src/main/java/org/apache/hive/ptest/execution/Dirs.java>https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/testutils/ptest2/src/main/java/org/apache/hive/ptest/execution/Dirs.java</a>[from <a href="createdir\cluster6.html">7 instances</a>]</p>Centrality&darr;:5.999579849999163&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>dir</em>s.<em>create</em></font><font color="#000000">(</font><font color="#000000">File&nbsp;<em>dir</em></font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if</b></font><font color="#000000">(</font><font color="#000000"><em>dir</em>.is<em>dir</em>ectory</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000"><em>dir</em>;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if</b></font><font color="#000000">(</font><font color="#000000"><em>dir</em>.mk<em>dir</em>s</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000"><em>dir</em>;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ExplodedComponentInstallationTest.java>https://github.com/apache/servicemix3/blob/13d04b9a4d5966593a05cdf48174a3fc234ef509/servicemix-core/src/test/java/org/servicemix/jbi/installation/ExplodedComponentInstallationTest.java</a>[from <a href="createdir\cluster7.html">6 instances</a>]</p>Centrality&darr;:4.999993855787576&nbsp; Specificity&uarr;:0.7357588823428847
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ExplodedComponentInstallationTest.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>&nbsp;=&nbsp;File.<em>create</em>TempFile</font><font color="#000000">(</font><font color="#2a00ff">&#34;servicemix&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;root<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tempRoot<em>dir</em>.delete</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;tempTemp&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">tempRoot<em>dir</em>.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;/temp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!tempTemp.mk<em>dir</em>s</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fail</font><font color="#000000">(</font><font color="#2a00ff">&#34;Unable&nbsp;to&nbsp;<em>create</em>&nbsp;temporary&nbsp;working&nbsp;root&nbsp;<em>dir</em>ectory&nbsp;[&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;tempTemp.getAbsolutePath</font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;]&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hbase/blob/dcc711fff2341402c52095fc7db92df597ec58c4/hbase-server/src/test/java/org/apache/hadoop/hbase/replication/TestReplicationSource.java>https://github.com/apache/hbase/blob/dcc711fff2341402c52095fc7db92df597ec58c4/hbase-server/src/test/java/org/apache/hadoop/hbase/replication/TestReplicationSource.java</a>[from <a href="createdir\cluster8.html">6 instances</a>]</p>Centrality&darr;:4.9987072120162495&nbsp; Specificity&uarr;:1.00642944881611
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestReplicationSource.setUpBeforeClass</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;root<em>dir</em>&nbsp;=&nbsp;TEST_UTIL.<em>create</em>Root<em>dir</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">oldLog<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">root<em>dir</em>,&nbsp;HConstants.HREGION_OLDLOG<em>dir</em>_NAME</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">FS.exists</font><font color="#000000">(</font><font color="#000000">oldLog<em>dir</em></font><font color="#000000">))&nbsp;</font><font color="#000000">FS.delete</font><font color="#000000">(</font><font color="#000000">oldLog<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">log<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">root<em>dir</em>,&nbsp;HConstants.HREGION_LOG<em>dir</em>_NAME</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">FS.exists</font><font color="#000000">(</font><font color="#000000">log<em>dir</em></font><font color="#000000">))&nbsp;</font><font color="#000000">FS.delete</font><font color="#000000">(</font><font color="#000000">log<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/jena/blob/31a8cce9e26e46526613c2ca550c900c3dcb4b34/jena-tdb/src/test/java/org/apache/jena/tdb/store/TestLocationLockStoreConnection.java>https://github.com/apache/jena/blob/31a8cce9e26e46526613c2ca550c900c3dcb4b34/jena-tdb/src/test/java/org/apache/jena/tdb/store/TestLocationLockStoreConnection.java</a>[from <a href="createdir\cluster9.html">6 instances</a>]</p>Centrality&darr;:4.997521206423828&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestLocationLockStoreConnection.location_lock_store_connection_02</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Location&nbsp;<em>dir</em>&nbsp;=&nbsp;Location.<em>create</em></font><font color="#000000">(</font><font color="#000000">temp<em>dir</em>.getRoot</font><font color="#000000">()</font><font color="#000000">.getAbsolutePath</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">LocationLock&nbsp;lock&nbsp;=&nbsp;<em>dir</em>.getLock</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertTrue</font><font color="#000000">(</font><font color="#000000">lock.canLock</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertFalse</font><font color="#000000">(</font><font color="#000000">lock.isLocked</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertFalse</font><font color="#000000">(</font><font color="#000000">lock.isOwned</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertTrue</font><font color="#000000">(</font><font color="#000000">lock.canObtain</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/71de367c5e80ea76d1e8d21f0216cd6b879dcee5/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/CreateEditsLog.java>https://github.com/apache/hadoop/blob/71de367c5e80ea76d1e8d21f0216cd6b879dcee5/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/CreateEditsLog.java</a>[from <a href="createdir\cluster10.html">5 instances</a>]</p>Centrality&darr;:3.999623626375387&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>create</em>EditsLog.main</font><font color="#000000">(</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000">args</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">5</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">!editsLog<em>dir</em>.exists</font><font color="#000000">()&nbsp;)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">!editsLog<em>dir</em>.mk<em>dir</em></font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">&#34;cannot&nbsp;<em>create</em>&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;edits_<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.exit</font><font color="#000000">(</font><font color="#000000">-</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/security/ssl/TestEncryptedShuffle.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient/src/test/java/org/apache/hadoop/mapreduce/security/ssl/TestEncryptedShuffle.java</a>[from <a href="createdir\cluster11.html">5 instances</a>]</p>Centrality&darr;:3.999983271863637&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestEncryptedShuffle.encryptedShuffleWithCerts</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">useClientCerts</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">6</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;input<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#2a00ff">&#34;input&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">input<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">OutputStreamWriter</font><font color="#000000">(</font><font color="#000000">fs.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">input<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data.txt&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.write</font><font color="#000000">(</font><font color="#2a00ff">&#34;hello&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/lib/TestMultipleOutputs.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/lib/TestMultipleOutputs.java</a>[from <a href="createdir\cluster12.html">4 instances</a>]</p>Centrality&darr;:2.9998250460537976&nbsp; Specificity&uarr;:1.4715177646857693
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMultipleOutputs.setUp</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;in<em>dir</em>&nbsp;=&nbsp;get<em>dir</em></font><font color="#000000">(</font><font color="#000000">IN_<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">JobConf&nbsp;conf&nbsp;=&nbsp;<em>create</em>JobConf</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;FileSystem.get</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.delete</font><font color="#000000">(</font><font color="#000000">root<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;<em>create</em>&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-shared/blob/70b557d966d2cfa4ce42e3266cfe19a6fcbfe590/maven-invoker/src/test/java/org/apache/maven/shared/invoker/MavenCommandLineBuilderTest.java>https://github.com/apache/maven-shared/blob/70b557d966d2cfa4ce42e3266cfe19a6fcbfe590/maven-invoker/src/test/java/org/apache/maven/shared/invoker/MavenCommandLineBuilderTest.java</a>[from <a href="createdir\cluster13.html">4 instances</a>]</p>Centrality&darr;:2.9989193083005965&nbsp; Specificity&uarr;:0.503214724408055
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenCommandLineBuilderTest.setupTempMavenHomeIfMissing</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">forceDummy</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/bindings/servicemix-ftp/src/test/java/org/apache/servicemix/ftp/FtpSenderEndpointTest.java>https://github.com/apache/servicemix-components/blob/a7e22cc216847553923ed674c48bd6ac7e0ed78b/bindings/servicemix-ftp/src/test/java/org/apache/servicemix/ftp/FtpSenderEndpointTest.java</a>[from <a href="createdir\cluster14.html">4 instances</a>]</p>Centrality&darr;:2.9840453538251626&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">FtpSenderEndpointTest.testAuto<em>create</em><em>dir</em></font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">TEST_<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;user1&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertFalse</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>dir</em>&nbsp;should&nbsp;not&nbsp;have&nbsp;been&nbsp;<em>create</em>d:&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;<em>dir</em>,&nbsp;<em>dir</em>.exists</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/knox/blob/f93d47042f528681e2a2b0097a9b6a432a2febd2/gateway-test/src/test/java/org/apache/hadoop/gateway/GatewayDeployFuncTest.java>https://github.com/apache/knox/blob/f93d47042f528681e2a2b0097a9b6a432a2febd2/gateway-test/src/test/java/org/apache/hadoop/gateway/GatewayDeployFuncTest.java</a>[from <a href="createdir\cluster15.html">4 instances</a>]</p>Centrality&darr;:2.9135816538546675&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">GatewayDeployFuncTest.setupGateway</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;target<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(&nbsp;</font><font color="#000000">System.getProperty</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;user.<em>dir</em>&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;target&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/snapshot/TestSetQuotaWithSnapshot.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-hdfs-project/hadoop-hdfs/src/test/java/org/apache/hadoop/hdfs/server/namenode/snapshot/TestSetQuotaWithSnapshot.java</a>[from <a href="createdir\cluster16.html">3 instances</a>]</p>Centrality&darr;:1.9999998874648126&nbsp; Specificity&uarr;:1.7421883311589947
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestSetQuotaWithSnapshot.testClearQuota</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;<em>dir</em>Node.getDiffs</font><font color="#000000">()</font><font color="#000000">.asList</font><font color="#000000">()</font><font color="#000000">.size</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">SnapshotTestHelper.<em>create</em>Snapshot</font><font color="#000000">(</font><font color="#000000">hdfs,&nbsp;<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;s1&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">hdfs.setQuota</font><font color="#000000">(</font><font color="#000000"><em>dir</em>,&nbsp;HdfsConstants.QUOTA_RESET,&nbsp;HdfsConstants.QUOTA_RESET</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>dir</em>Node&nbsp;=&nbsp;fs<em>dir</em>.getINode4Write</font><font color="#000000">(</font><font color="#000000"><em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">.as<em>dir</em>ectory</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/lucene/test-framework/src/test/org/apache/lucene/mockfile/TestWindowsFS.java>https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/lucene/test-framework/src/test/org/apache/lucene/mockfile/TestWindowsFS.java</a>[from <a href="createdir\cluster17.html">3 instances</a>]</p>Centrality&darr;:1.9990819738220922&nbsp; Specificity&uarr;:0.2706705664732254
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestWindowsFS.testDeleteIfExistsOpenFile</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;<em>dir</em>&nbsp;=&nbsp;wrap</font><font color="#000000">(</font><font color="#000000"><em>create</em>Temp<em>dir</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">OutputStream&nbsp;file&nbsp;=&nbsp;Files.newOutputStream</font><font color="#000000">(</font><font color="#000000"><em>dir</em>.resolve</font><font color="#000000">(</font><font color="#2a00ff">&#34;stillopen&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.write</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.close</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/fs/shell/TestPathData.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/fs/shell/TestPathData.java</a>[from <a href="createdir\cluster18.html">3 instances</a>]</p>Centrality&darr;:1.986524106001829&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestPathData.initialize</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#2a00ff">&#34;d1&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-common/blob/ba438cc13dc7bc1ae27653f9599b0f3e6e7b931e/src/test/org/apache/hadoop/fs/kfs/TestKosmosFileSystem.java>https://github.com/apache/hadoop-common/blob/ba438cc13dc7bc1ae27653f9599b0f3e6e7b931e/src/test/org/apache/hadoop/fs/kfs/TestKosmosFileSystem.java</a>[from <a href="createdir\cluster19.html">3 instances</a>]</p>Centrality&darr;:1.9989647082303588&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestKosmosFileSystem.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">base<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">System.getProperty</font><font color="#000000">(</font><font color="#2a00ff">&#34;test.build.data&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;/tmp&#34;&nbsp;</font><font color="#000000">)&nbsp;</font><font color="#000000">+</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;/kfs-test&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/ab3197c20452e0dd908193d6854c204e6ee34645/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/fs/FileSystemContractBaseTest.java>https://github.com/apache/hadoop/blob/ab3197c20452e0dd908193d6854c204e6ee34645/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/fs/FileSystemContractBaseTest.java</a>[from <a href="createdir\cluster20.html">3 instances</a>]</p>Centrality&darr;:1.9995411275680108&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">FileSystemContractBaseTest.testRename<em>dir</em>ectoryAsExisting<em>dir</em>ectory</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;src&nbsp;=&nbsp;path</font><font color="#000000">(</font><font color="#2a00ff">&#34;/test/hadoop/<em>dir</em>&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">src</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/flume/blob/344e0accae5675fd3d14b8414531528607865aae/flume-ng-sources/flume-jms-source/src/test/java/org/apache/flume/source/jms/TestIntegrationActiveMQ.java>https://github.com/apache/flume/blob/344e0accae5675fd3d14b8414531528607865aae/flume-ng-sources/flume-jms-source/src/test/java/org/apache/flume/source/jms/TestIntegrationActiveMQ.java</a>[from <a href="createdir\cluster21.html">3 instances</a>]</p>Centrality&darr;:1.9950424956466672&nbsp; Specificity&uarr;:0.7357588823428847
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestIntegrationActiveMQ.setup</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">8</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">base<em>dir</em>&nbsp;=&nbsp;Files.<em>create</em>Temp<em>dir</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">tmp<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;tmp&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">data<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;data&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/solr/contrib/morphlines-core/src/java/org/apache/solr/morphlines/solr/SolrLocator.java>https://github.com/apache/lucene-solr/blob/72aa5784ecd7024dce7599c358b658bed4b31596/solr/contrib/morphlines-core/src/java/org/apache/solr/morphlines/solr/SolrLocator.java</a>[from <a href="createdir\cluster22.html">3 instances</a>]</p>Centrality&darr;:1.9633687222225316&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SolrLocator.getIndexSchema</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-scm/blob/5a9b53bacfea523c59c84d5187eff620699d6ec8/maven-scm-providers/maven-scm-provider-clearcase/src/main/java/org/apache/maven/scm/provider/clearcase/command/add/ClearCaseAddCommand.java>https://github.com/apache/maven-scm/blob/5a9b53bacfea523c59c84d5187eff620699d6ec8/maven-scm-providers/maven-scm-provider-clearcase/src/main/java/org/apache/maven/scm/provider/clearcase/command/add/ClearCaseAddCommand.java</a>[from <a href="createdir\cluster23.html">3 instances</a>]</p>Centrality&darr;:1.9923501710353602&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ClearCaseAddCommand.executeAddCommand</font><font color="#000000">(</font><font color="#000000">ScmProviderRepository&nbsp;scmProviderRepository,ScmFileSet&nbsp;scmFileSet,String&nbsp;string,boolean&nbsp;b</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">9</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000">getLogger</font><font color="#000000">()</font><font color="#000000">.isDebugEnabled</font><font color="#000000">()&nbsp;)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">getLogger</font><font color="#000000">()</font><font color="#000000">.debug</font><font color="#000000">(</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;Executing:&nbsp;&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;checkoutCurrent<em>dir</em>CommandLine.getWorking<em>dir</em>ectory</font><font color="#000000">()</font><font color="#000000">.getAbsolutePath</font><font color="#000000">()</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;&gt;&gt;&#34;&nbsp;</font><font color="#000000">+&nbsp;checkoutCurrent<em>dir</em>CommandLine.toString</font><font color="#000000">()&nbsp;)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/TestMapFile.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/io/TestMapFile.java</a>[from <a href="createdir\cluster24.html">3 instances</a>]</p>Centrality&darr;:1.9932620522426585&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMapFile.testFix</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;<em>dir</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">TEST_<em>dir</em>,&nbsp;INDEX_LESS_MAP_FILE</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">writer&nbsp;=&nbsp;<em>create</em>Writer</font><font color="#000000">(</font><font color="#000000">INDEX_LESS_MAP_FILE,&nbsp;IntWritable.class,&nbsp;Text.</font><font color="#7f0055"><b>class</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/testutils/ptest2/src/test/java/org/apache/hive/ptest/execution/conf/TestTestParser.java>https://github.com/apache/hive/blob/ac755ebe26361a4647d53db2a28500f71697b276/testutils/ptest2/src/test/java/org/apache/hive/ptest/execution/conf/TestTestParser.java</a>[from <a href="createdir\cluster25.html">3 instances</a>]</p>Centrality&darr;:1.993262053000821&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestTestParser.setup</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">unitTest<em>dir</em>1&nbsp;=&nbsp;<em>dir</em>s.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;Joiner.on</font><font color="#000000">(</font><font color="#2a00ff">&#34;/&#34;</font><font color="#000000">)</font><font color="#000000">.join</font><font color="#000000">(</font><font color="#2a00ff">&#34;source&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;build&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;1&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;units&#34;</font><font color="#000000">,</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;test&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;classes&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">unitTest<em>dir</em>2&nbsp;=&nbsp;<em>dir</em>s.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;Joiner.on</font><font color="#000000">(</font><font color="#2a00ff">&#34;/&#34;</font><font color="#000000">)</font><font color="#000000">.join</font><font color="#000000">(</font><font color="#2a00ff">&#34;source&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;build&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;2&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;units&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;test&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;classes&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">qFileTest<em>dir</em>&nbsp;=&nbsp;<em>dir</em>s.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;Joiner.on</font><font color="#000000">(</font><font color="#2a00ff">&#34;/&#34;</font><font color="#000000">)</font><font color="#000000">.join</font><font color="#000000">(</font><font color="#2a00ff">&#34;source&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;qfiles&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">property<em>dir</em>&nbsp;=&nbsp;<em>dir</em>s.<em>create</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">base<em>dir</em>,&nbsp;Joiner.on</font><font color="#000000">(</font><font color="#2a00ff">&#34;/&#34;</font><font color="#000000">)</font><font color="#000000">.join</font><font color="#000000">(</font><font color="#2a00ff">&#34;source&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;props&#34;</font><font color="#000000">)))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertTrue</font><font color="#000000">((</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">unitTest<em>dir</em>1,&nbsp;</font><font color="#2a00ff">&#34;TestA.class&#34;</font><font color="#000000">))</font><font color="#000000">.<em>create</em>NewFile</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/aries/blob/0b001f74e0bba49d9b7f3cf937a17164e906d95f/application/application-management/src/test/java/org/apache/aries/unittest/utils/EbaUnitTestUtils.java>https://github.com/apache/aries/blob/0b001f74e0bba49d9b7f3cf937a17164e906d95f/application/application-management/src/test/java/org/apache/aries/unittest/utils/EbaUnitTestUtils.java</a>[from <a href="createdir\cluster26.html">3 instances</a>]</p>Centrality&darr;:1.997185785195431&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">EbaUnitTestUtils.<em>create</em>Eba</font><font color="#000000">(</font><font color="#000000">String&nbsp;rootFolder,String&nbsp;outputFile</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>create</em>EbaRecursive</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">File</font><font color="#000000">(</font><font color="#000000">rootFolder</font><font color="#000000">)</font><font color="#000000">,&nbsp;temp<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/incubator-tajo/blob/7283c586af5d0df675373b25d19c5eabb527e303/tajo-core/tajo-core-backend/src/test/java/org/apache/tajo/engine/planner/physical/TestRightOuterHashJoinExec.java>https://github.com/apache/incubator-tajo/blob/7283c586af5d0df675373b25d19c5eabb527e303/tajo-core/tajo-core-backend/src/test/java/org/apache/tajo/engine/planner/physical/TestRightOuterHashJoinExec.java</a>[from <a href="createdir\cluster27.html">3 instances</a>]</p>Centrality&darr;:1.998752655406543&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestRightOuterHashJoinExec.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">14</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">util&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">TajoTestingCluster</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">util.initTest<em>dir</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">catalog&nbsp;=&nbsp;util.startCatalogCluster</font><font color="#000000">()</font><font color="#000000">.getCatalog</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

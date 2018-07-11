@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Query Embedding Visualization</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="code.js"></script>
+	<script src="embeddings.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<h1>View Embeddings for</h1>
+
+<div class="input-group" style="width:800px">
+  <span class="input-group-addon glyphicon glyphicon-filter" id="basic-addon1"></span>
+  <input id="filterInput" type="text" class="form-control" placeholder="Filter queries using regex..." aria-describedby="basic-addon1">  
+  <span class="input-group-addon" id="filterMessage">Nothing filtered</span>
+</div>
+<div id="embed"><h2><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading, please wait...
+</h2></div>
+<input type="checkbox" id="showNNs" checked="checked"> Visualize nearest neighbors on mouse over<br>
+<footer>
+    <p>by Xiaodong Gu, Hongyu Zhang, and Sunghun Kim</p>
+</footer>
+
+</body>
+</html>

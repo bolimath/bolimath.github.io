@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageLoadBalancerPolicyDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageLoadBalancerPolicyDaoImpl.java</a></p>Centrality&darr;:4.999954600070238&nbsp; Specificity&uarr;:1.4715177646857693<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageLoadBalancerPolicyDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em>,boolean&nbsp;limit,int&nbsp;page</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//id,&nbsp;zone_id,&nbsp;account_id,&nbsp;domain_id,&nbsp;created,&nbsp;deleted</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;lbId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zoneId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;created<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;deleted<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;createdTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;deletedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">createdTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">created<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;createdTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">deletedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">deleted<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;deletedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsageLoadBalancerPolicyVO</font><font color="#000000">(</font><font color="#000000">lbId,&nbsp;zoneId,&nbsp;acctId,&nbsp;dId,&nbsp;created<em>date</em>,&nbsp;deleted<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVPNUserDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVPNUserDaoImpl.java</a></p>Centrality&darr;:4.999954600070238&nbsp; Specificity&uarr;:1.4715177646857693<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageVPNUserDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em>,boolean&nbsp;limit,int&nbsp;page</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//zoneId,&nbsp;account_id,&nbsp;domain_id,&nbsp;user_id,&nbsp;user_name,&nbsp;created,&nbsp;deleted</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zoneId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">userId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;userName&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;created<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;deleted<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;createdTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;deletedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">7</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">createdTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">created<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;createdTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">deletedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">deleted<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;deletedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsageVPNUserVO</font><font color="#000000">(</font><font color="#000000">zoneId,&nbsp;acctId,&nbsp;dId,&nbsp;userId,&nbsp;userName,&nbsp;created<em>date</em>,&nbsp;deleted<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsagePortForwardingRuleDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsagePortForwardingRuleDaoImpl.java</a></p>Centrality&darr;:4.999954600070238&nbsp; Specificity&uarr;:1.4715177646857693<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsagePortForwardingRuleDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em>,boolean&nbsp;limit,int&nbsp;page</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//id,&nbsp;zone_id,&nbsp;account_id,&nbsp;domain_id,&nbsp;created,&nbsp;deleted</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;pfId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zoneId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;created<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;deleted<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;createdTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;deletedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">createdTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">created<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;createdTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">deletedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">deleted<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;deletedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsagePortForwardingRuleVO</font><font color="#000000">(</font><font color="#000000">pfId,&nbsp;zoneId,&nbsp;acctId,&nbsp;dId,&nbsp;created<em>date</em>,&nbsp;deleted<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/flume/blob/344e0accae5675fd3d14b8414531528607865aae/flume-ng-sinks/flume-ng-elasticsearch-sink/src/main/java/org/apache/flume/sink/elasticsearch/TimeBasedIndexNameBuilder.java>https://github.com/apache/flume/blob/344e0accae5675fd3d14b8414531528607865aae/flume-ng-sinks/flume-ng-elasticsearch-sink/src/main/java/org/apache/flume/sink/elasticsearch/TimeBasedIndexNameBuilder.java</a></p>Centrality&darr;:4.9998016985801605&nbsp; Specificity&uarr;:1.7421883311589947<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>time</em>BasedIndexNameBuilder.configure</font><font color="#000000">(</font><font color="#000000">Context&nbsp;context</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;<em>time</em>ZoneString&nbsp;=&nbsp;context.<em>get</em>String</font><font color="#000000">(</font><font color="#000000"><em>time</em>_ZONE</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">StringUtils.isBlank</font><font color="#000000">(</font><font color="#000000"><em>date</em>FormatString</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>FormatString&nbsp;=&nbsp;DEFAULT_<em>date</em>_FORMAT;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">StringUtils.isBlank</font><font color="#000000">(</font><font color="#000000"><em>time</em>ZoneString</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>time</em>ZoneString&nbsp;=&nbsp;DEFAULT_<em>time</em>_ZONE;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageNetworkOfferingDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageNetworkOfferingDaoImpl.java</a></p>Centrality&darr;:4.999954600070238&nbsp; Specificity&uarr;:1.9747324890938245<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageNetworkOfferingDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em>,boolean&nbsp;limit,int&nbsp;page</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//zoneId,&nbsp;account_id,&nbsp;domain_id,&nbsp;vm_instance_id,&nbsp;network_offering_id,&nbsp;nic_id,&nbsp;is_default,&nbsp;created,&nbsp;deleted</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zoneId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">vmId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">noId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">nicId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">isDefault&nbsp;=&nbsp;Boolean.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Boolean</font><font color="#000000">(</font><font color="#990000">7</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;created<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;deleted<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;createdTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">8</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;deletedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">9</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">createdTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">created<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;createdTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">deletedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">deleted<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;deletedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsageNetworkOfferingVO</font><font color="#000000">(</font><font color="#000000">zoneId,&nbsp;acctId,&nbsp;dId,&nbsp;vmId,&nbsp;noId,&nbsp;nicId,&nbsp;isDefault,&nbsp;created<em>date</em>,&nbsp;deleted<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageIPAddressDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageIPAddressDaoImpl.java</a></p>Centrality&darr;:4.99998329829921&nbsp; Specificity&uarr;:2.342611930265267<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageIPAddressDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//account_id,&nbsp;domain_id,&nbsp;zone_id,&nbsp;address,&nbsp;assigned,&nbsp;released</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;id&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;addr&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Boolean&nbsp;isSourceNat&nbsp;=&nbsp;Boolean.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Boolean</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Boolean&nbsp;isSystem&nbsp;=&nbsp;Boolean.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Boolean</font><font color="#000000">(</font><font color="#990000">7</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;assigned<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;released<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;assignedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">8</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;releasedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">9</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">assignedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assigned<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;assignedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">releasedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">released<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;releasedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsageIPAddressVO</font><font color="#000000">(</font><font color="#000000">id,&nbsp;acctId,&nbsp;dId,&nbsp;zId,&nbsp;addr,&nbsp;isSourceNat,&nbsp;isSystem,&nbsp;assigned<em>date</em>,&nbsp;released<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

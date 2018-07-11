@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/lens/blob/3dc348ac2793b5394f0ef58bba6da6f9933c5e1d/lens-cube/src/test/java/org/apache/lens/cube/parse/TestTimeRangeWriterWithQuery.java>https://github.com/apache/lens/blob/3dc348ac2793b5394f0ef58bba6da6f9933c5e1d/lens-cube/src/test/java/org/apache/lens/cube/parse/TestTimeRangeWriterWithQuery.java</a></p>Centrality&darr;:2.9984171927786405&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Test<em>time</em>RangeWriterWithQuery.<em>get</em>OneLess</font><font color="#000000">(</font><font color="#000000"><em>date</em>&nbsp;in,int&nbsp;calField</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000">in</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">calField,&nbsp;-</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/main/java/org/apache/isis/viewer/wicket/ui/components/scalars/jdkdates/DateConverterForJavaUtilDate.java>https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/main/java/org/apache/isis/viewer/wicket/ui/components/scalars/jdkdates/DateConverterForJavaUtilDate.java</a></p>Centrality&darr;:2.9984171927786405&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>ConverterForJavaUtil<em>date</em>.addDays</font><font color="#000000">(</font><font color="#000000">java.util.<em>date</em>&nbsp;value,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">days</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.<em>date</em>,&nbsp;days</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;adjusted&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/main/java/org/apache/isis/viewer/wicket/ui/components/scalars/jdkdates/DateConverterForJavaSqlDate.java>https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/main/java/org/apache/isis/viewer/wicket/ui/components/scalars/jdkdates/DateConverterForJavaSqlDate.java</a></p>Centrality&darr;:2.9972643541033364&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>ConverterForJavaSql<em>date</em>.addDays</font><font color="#000000">(</font><font color="#000000">java.util.<em>date</em>&nbsp;value,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">days</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.<em>date</em>,&nbsp;days</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;adjusted&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/falcon/blob/77910aefd2716f22d545eeeb32a7cc8f493bc5a9/common/src/main/java/org/apache/falcon/util/DateUtil.java>https://github.com/apache/falcon/blob/77910aefd2716f22d545eeeb32a7cc8f493bc5a9/common/src/main/java/org/apache/falcon/util/DateUtil.java</a></p>Centrality&darr;:2.9984171927786405&nbsp; Specificity&uarr;:0.36787944117144233<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>Util.<em>get</em>NextMinute</font><font color="#000000">(</font><font color="#000000"><em>date</em>&nbsp;<em>time</em></font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;insCal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;UTC&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">insCal.set<em>time</em></font><font color="#000000">(</font><font color="#000000"><em>time</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">insCal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">insCal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

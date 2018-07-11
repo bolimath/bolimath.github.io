@@ -1,0 +1,118 @@
+.container {
+    width: 900px;
+}
+.about {
+    width: 820px;
+}
+.main {
+    margin-top: 80px;
+}
+footer {
+    text-align: center;
+    font-weight: 300;
+    color: #7F7F7F;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.main * {
+    font-family: 'Roboto', Helvetica, Arial, serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Roboto', Helvetica, Arial, serif;
+    font-weight: 400;
+}
+.about {
+    font-size: 15px;
+}
+.l {
+    font-weight: 300 !important;
+}
+.m {
+    font-weight: 500 !important;
+}
+.n {
+    font-weight: 400 !important;
+}
+.b {
+    font-weight: 700 !important;
+    color: black;
+}
+.i {
+    font-style: italic !important;
+}
+span.pub_title {
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+}
+span.pub_authors {
+    font-weight: 300;
+    font-size: 14px;
+}
+span.pub_myname {
+    font-weight: 400;
+    font-size: 14px;
+}
+span.pub_type {
+    font-weight: 300;
+    color: #7F7F7F;
+    font-size: 14px;
+}
+span.pub_downloads {
+    font-weight: 300;
+    color: #7F7F7F;
+    font-size: 12px;
+}
+td.table_title {
+    padding-left: 20px;
+    font-weight: 700;
+    color: black;
+}
+td.table_desc {
+    padding-left: 20px;
+    font-weight: 300;
+}
+td.table_date {
+    text-align: right;
+    font-weight: 300;
+}
+
+
+td.news_title {
+    padding-left: 20px;
+}
+td.news_date {
+    font-weight: 300;
+    text-align: right;
+}
+td .news_hl {
+    font-weight: 400;
+    color: steelblue;
+}
+
+
+tr.table_item td {
+    padding-top: 10px;
+}
+.main a:link, a:visited, a:hover, a:active {
+    color: steelblue;
+    text-decoration: underline;
+}
+.main a:hover {
+    color: darkblue;
+}
+a:focus {
+    outline: 0
+}
+#publications {
+    visibility: hidden;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+#home {
+    top: -80px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3498ForkToOtherMojoTest.java>https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3498ForkToOtherMojoTest.java</a></p>Centrality&darr;:3.9999061082823495&nbsp; Specificity&uarr;:1.3743088899875524<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenITmng3498ForkToOtherMojoTest.testitMNG3498</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Verifier&nbsp;verifier&nbsp;=&nbsp;newVerifier</font><font color="#000000">(&nbsp;</font><font color="#000000">plugin<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;remote&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.<em>delete</em>Artifact</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;org.apache.maven.its.mng3498&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;mavenit-mng3498-plugin&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;1&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;pom&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.executeGoal</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;install&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.verifyErrorFreeLog</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.resetStreams</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3396DependencyManagementForOverConstrainedRangesTest.java>https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3396DependencyManagementForOverConstrainedRangesTest.java</a></p>Centrality&darr;:3.9906590594914424&nbsp; Specificity&uarr;:1.2389736067509398<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenITmng3396DependencyManagementForOverConstrainedRangesTest.testitMNG3396</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">test<em>dir</em>&nbsp;=&nbsp;ResourceExtractor.simpleExtractResources</font><font color="#000000">(&nbsp;</font><font color="#000000">getClass</font><font color="#000000">()</font><font color="#000000">,&nbsp;base<em>dir</em>&nbsp;+&nbsp;</font><font color="#2a00ff">&#34;/plugin&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier&nbsp;=&nbsp;newVerifier</font><font color="#000000">(&nbsp;</font><font color="#000000">test<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;remote&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.<em>delete</em>Artifact</font><font color="#000000">(&nbsp;</font><font color="#000000">GROUP_ID,&nbsp;</font><font color="#2a00ff">&#34;plugin&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;1.0&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;jar&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3600DeploymentModeDefaultsTest.java>https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3600DeploymentModeDefaultsTest.java</a></p>Centrality&darr;:3.9882591487178196&nbsp; Specificity&uarr;:2.4779472135018796<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenITmng3600DeploymentModeDefaultsTest.testitMNG3600ModesSet</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.addCliOption</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;settings-modes-set.xml&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.setLogFileName</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;log-modes-set.txt&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.executeGoal</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;validate&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.verifyErrorFreeLog</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.resetStreams</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-integration-testing/blob/ef7b0d378305ab62aa7b3824b808588e5cb1a11e/core-it-suite/src/test/java/org/apache/maven/it/MavenIT0030DepPomDepMngtInheritanceTest.java>https://github.com/apache/maven-integration-testing/blob/ef7b0d378305ab62aa7b3824b808588e5cb1a11e/core-it-suite/src/test/java/org/apache/maven/it/MavenIT0030DepPomDepMngtInheritanceTest.java</a></p>Centrality&darr;:3.9748207439786865&nbsp; Specificity&uarr;:1.9747324890938245<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenIT0030DepPomDepMngtInheritanceTest.testit0030</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">File&nbsp;test<em>dir</em>&nbsp;=&nbsp;ResourceExtractor.simpleExtractResources</font><font color="#000000">(&nbsp;</font><font color="#000000">getClass</font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;/it0030&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Verifier&nbsp;verifier&nbsp;=&nbsp;newVerifier</font><font color="#000000">(&nbsp;</font><font color="#000000">test<em>dir</em>.getAbsolutePath</font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;remote&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.<em>delete</em>Artifact</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;org.apache.maven.it&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;maven-it-it0030-child-project2&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;1.0-SNAPSHOT&#34;</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;jar&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.executeGoal</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;install&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3586SystemScopePluginDependencyTest.java>https://github.com/apache/maven-integration-testing/blob/d708e1dfdec0b03556cb9938f96b1d96a77ee721/core-it-suite/src/test/java/org/apache/maven/it/MavenITmng3586SystemScopePluginDependencyTest.java</a></p>Centrality&darr;:3.9724222620057517&nbsp; Specificity&uarr;:1.103638323514327<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MavenITmng3586SystemScopePluginDependencyTest.testitFromProject</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.executeGoal</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;validate&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.verifyErrorFreeLog</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">verifier.resetStreams</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Properties&nbsp;props&nbsp;=&nbsp;verifier.loadProperties</font><font color="#000000">(&nbsp;</font><font color="#2a00ff">&#34;target/pcl.properties&#34;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapreduce/lib/input/TestMultipleInputs.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapreduce/lib/input/TestMultipleInputs.java</a></p>Centrality&darr;:6.999628550447655&nbsp; Specificity&uarr;:1.103638323514327<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMultipleInputs.setUp</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Configuration&nbsp;conf&nbsp;=&nbsp;createJobConf</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;FileSystem.get</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.<em>delete</em></font><font color="#000000">(</font><font color="#000000">root<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in1<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in1<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in2<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in2<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/MRCaching.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/MRCaching.java</a></p>Centrality&darr;:6.981514105982903&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MRCaching.launchMRCache</font><font color="#000000">(</font><font color="#000000">String&nbsp;in<em>dir</em>,String&nbsp;out<em>dir</em>,String&nbsp;cache<em>dir</em>,JobConf&nbsp;conf,String&nbsp;input,boolean&nbsp;withSymlink</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;FileSystem.get</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.<em>delete</em></font><font color="#000000">(</font><font color="#000000">out<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-common/src/test/java/org/apache/hadoop/mapred/TestLocalModeWithNewApis.java>https://github.com/apache/hadoop/blob/c1d50a91f7c05e4aaf4655380c8dcd11703ff158/hadoop-mapreduce-project/hadoop-mapreduce-client/hadoop-mapreduce-client-common/src/test/java/org/apache/hadoop/mapred/TestLocalModeWithNewApis.java</a></p>Centrality&darr;:6.981222088857676&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestLocalModeWithNewApis.testNewApis</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;inFs&nbsp;=&nbsp;in<em>dir</em>.getFileSystem</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;outFs&nbsp;=&nbsp;out<em>dir</em>.getFileSystem</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">outFs.<em>delete</em></font><font color="#000000">(</font><font color="#000000">out<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!inFs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">DataOutputStream&nbsp;file&nbsp;=&nbsp;inFs.create</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">in<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;part-0&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/MRCaching.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/MRCaching.java</a></p>Centrality&darr;:6.978001492201129&nbsp; Specificity&uarr;:1.103638323514327<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">MRCaching.setupCache</font><font color="#000000">(</font><font color="#000000">String&nbsp;cache<em>dir</em>,FileSystem&nbsp;fs</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;cachePath&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">cache<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.<em>delete</em></font><font color="#000000">(</font><font color="#000000">cachePath,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">cachePath</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;cachePath.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-common/blob/ba438cc13dc7bc1ae27653f9599b0f3e6e7b931e/src/test/org/apache/hadoop/mapred/TestTaskFail.java>https://github.com/apache/hadoop-common/blob/ba438cc13dc7bc1ae27653f9599b0f3e6e7b931e/src/test/org/apache/hadoop/mapred/TestTaskFail.java</a></p>Centrality&darr;:6.974017177241818&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestTaskFail.launchJob</font><font color="#000000">(</font><font color="#000000">JobConf&nbsp;conf,Path&nbsp;in<em>dir</em>,Path&nbsp;out<em>dir</em>,String&nbsp;input</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!inFs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/TestJobSysDirWithDFS.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/TestJobSysDirWithDFS.java</a></p>Centrality&darr;:6.972449255777908&nbsp; Specificity&uarr;:0.0<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestJobSys<em>dir</em>WithDFS.launchWordCount</font><font color="#000000">(</font><font color="#000000">JobConf&nbsp;conf,Path&nbsp;in<em>dir</em>,Path&nbsp;out<em>dir</em>,String&nbsp;input,int&nbsp;numMaps,int&nbsp;numReduces</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!inFs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">DataOutputStream&nbsp;file&nbsp;=&nbsp;inFs.create</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Path</font><font color="#000000">(</font><font color="#000000">in<em>dir</em>,&nbsp;</font><font color="#2a00ff">&#34;part-0&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">file.writeBytes</font><font color="#000000">(</font><font color="#000000">input</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/lib/TestMultipleOutputs.java>https://github.com/apache/hadoop-mapreduce/blob/cd81823732f76baefdff58421082c7f16ddab238/src/test/mapred/org/apache/hadoop/mapred/lib/TestMultipleOutputs.java</a></p>Centrality&darr;:6.967782202564513&nbsp; Specificity&uarr;:0.7357588823428847<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestMultipleOutputs.setUp</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Path&nbsp;in<em>dir</em>&nbsp;=&nbsp;get<em>dir</em></font><font color="#000000">(</font><font color="#000000">IN_<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">JobConf&nbsp;conf&nbsp;=&nbsp;createJobConf</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FileSystem&nbsp;fs&nbsp;=&nbsp;FileSystem.get</font><font color="#000000">(</font><font color="#000000">conf</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fs.<em>delete</em></font><font color="#000000">(</font><font color="#000000">root<em>dir</em>,&nbsp;</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!fs.mk<em>dir</em>s</font><font color="#000000">(</font><font color="#000000">in<em>dir</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>throw&nbsp;new&nbsp;</b></font><font color="#000000">IOException</font><font color="#000000">(</font><font color="#2a00ff">&#34;Mk<em>dir</em>s&nbsp;failed&nbsp;to&nbsp;create&nbsp;&#34;&nbsp;</font><font color="#000000">+&nbsp;in<em>dir</em>.toString</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/hbase/blob/dcc711fff2341402c52095fc7db92df597ec58c4/hbase-server/src/main/java/org/apache/hadoop/hbase/backup/HFileArchiver.java>https://github.com/apache/hbase/blob/dcc711fff2341402c52095fc7db92df597ec58c4/hbase-server/src/main/java/org/apache/hadoop/hbase/backup/HFileArchiver.java</a></p>Centrality&darr;:6.889770704039692&nbsp; Specificity&uarr;:1.4715177646857693<br>
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">HFileArchiver.archiveRegion</font><font color="#000000">(</font><font color="#000000">FileSystem&nbsp;fs,Path&nbsp;root<em>dir</em>,Path&nbsp;table<em>dir</em>,Path&nbsp;region<em>dir</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">table<em>dir</em>&nbsp;==&nbsp;</font><font color="#7f0055"><b>null&nbsp;</b></font><font color="#000000">||&nbsp;region<em>dir</em>&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">LOG.error</font><font color="#000000">(</font><font color="#2a00ff">&#34;No&nbsp;archive&nbsp;<em>dir</em>ectory&nbsp;could&nbsp;be&nbsp;found&nbsp;because&nbsp;table<em>dir</em>&nbsp;(&#34;&nbsp;</font><font color="#000000">+&nbsp;table<em>dir</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;)&nbsp;or&nbsp;region<em>dir</em>&nbsp;(&#34;&nbsp;</font><font color="#000000">+&nbsp;region<em>dir</em>&nbsp;+&nbsp;</font><font color="#2a00ff">&#34;was&nbsp;null.&nbsp;Deleting&nbsp;files&nbsp;instead.&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>delete</em>RegionWithoutArchiving</font><font color="#000000">(</font><font color="#000000">fs,&nbsp;region<em>dir</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;we&nbsp;should&nbsp;have&nbsp;archived,&nbsp;but&nbsp;failed&nbsp;to.&nbsp;Doesn't&nbsp;matter&nbsp;if&nbsp;we&nbsp;<em>delete</em>d</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;archived&nbsp;files&nbsp;correctly&nbsp;or&nbsp;not.</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

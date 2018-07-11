@@ -1,0 +1,30 @@
+/***********************************************/
+/* © ECRM (http://www.e-crm.co.uk/)
+* This notice MUST stay intact for legal use
+* Visit http://www.e-crm.co.uk/ for this template and others.
+***********************************************/
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+/***********************************************/
+
+.sidebarmenu ul { margin: 0; padding: 0; list-style-type: none; font-family: verdana; font-size: 1em; font-weight: bold; width: 210px; /* Main Menu Item widths */ border-bottom: 1px solid #cccccc; }
+ 
+.sidebarmenu ul li { position: relative; z-index: 1000; }
+
+/* Top level menu links style */
+.sidebarmenu ul li a{ display: block; overflow: auto; /*force hasLayout in IE7 */ color: white; text-decoration: none; padding: 8px; border-bottom: 1px solid #999999; border-right: 1px solid #999999 }
+
+.sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active { background-color: #012d58; /*background of tabs (default state)*/ }
+
+.sidebarmenu ul li a:visited { color: white; }
+
+.sidebarmenu ul li a:hover { background-color: black; }
+
+/*Sub level menu items */
+.sidebarmenu ul li ul { position: absolute; z-index: 1000; width: 210px; /*Sub Menu Items width */ top: 0; visibility: hidden; }
+
+.sidebarmenu a.subfolderstyle { background: url(../images/right.gif) no-repeat 97% 50%; }
+ 
+/* Holly Hack for IE \*/
+* html .sidebarmenu ul li { float: left; height: 1%; }
+* html .sidebarmenu ul li a { height: 1%; }

@@ -1,0 +1,87 @@
+  /***********************************************/
+  /* ?ECRM (http://www.e-crm.co.uk/)
+  * This notice MUST stay intact for legal use
+  * Visit http://www.e-crm.co.uk/ for this template and others.
+  ***********************************************/
+  
+  /***********************************************/
+  /* Page style                             */
+  /***********************************************/ 
+  
+  body {
+	  background-image: url(../images/bg.gif);
+	  font-family: verdana;
+	  font-size: small;
+	  color: #000000;
+	  line-height: 1.5;
+	  margin: 0px;
+	  padding: 0px;
+	  margin-top: 1%;
+	  font-weight: normal;
+  }
+  
+  /***********************************************/
+  /* Layout divs                                 */
+  /***********************************************/
+  
+  #supercontainer { width: 1024px; background: #ffffff; margin: 0 auto; position: relative; top: 0px; border-left-width: 10px; border-left-style: solid; border-left-color: #999999; border-right-width: 10px; border-right-style: solid; border-right-color: #999999; } 
+  
+  #topcontainer { width: 1024px; background-color: #ffffff; margin: 0 auto; } 
+  
+	#logo { float: left; height: 60px; width: 326px; background-color: #ffffff; padding: 10px; }
+  
+  #contact { float: right; height: 60px; width: 624px; background-color: #ffffff; text-align: right; padding: 10px 20px 10px 10px; overflow: hidden; }
+  
+  #middlecontainer { width: 1024px; background: #ffffff; margin: 0 auto; } 
+  
+  #columncontainer { float: left; width: 230px; margin: 0 auto; position: relative; z-index: 1000; padding: 10px 0px 0px 0px; }
+  
+  #sidenav { width: 210px; background-color: #ffffff; margin: 0 auto; position: relative; z-index: 1000; font-size: 1.0em; text-align: left; padding: 10px 10px 10px 10px }
+  
+  #column { float: left; width: 210px; background-color: #ffffff; font-size: 0.85em; text-align: left; padding: 10px 10px 10px 10px; overflow: hidden; }
+  
+  #middle {
+	float: none;
+	width: 754px;
+	background-color: #ffffff;
+	position: relative;
+	z-index: 999;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #8b8989;
+	text-align: left;
+	padding: 10px;
+	overflow: hidden;
+}
+  
+  #footercontainer { width: 1000px; background: #ffffff; margin: 0 auto; position: relative; top: 0px; } 
+  
+  #footer { height: 30px; width: 1000px; background-color: #ffffff; margin-left: auto; margin-right: auto; font-size: x-small; color: #666666; text-align: left; padding: 20px 0px 0px 0px; overflow: hidden; }
+  
+  #image { height: 200px; width: 1000px; background-color: #ffffff; margin-left: auto; margin-right: auto; }
+  
+  /***********************************************/
+  /* H tag styles                             */
+  /***********************************************/ 
+  
+  h1, h2, h3, h4, h5, h6 { font-family : verdana; }
+  h1 { font-size: 1.4em; font-weight: bold; color: #000080; }
+  h2 { font-size: 1.2em; font-weight: bold; color: #000080; }
+  h3 { font-size: 1.1em; font-weight: bold; color: #000080; }
+  h4 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #CC3333;
+}
+  h5 { font-size: 1.0em; font-weight: bold; color: #000080; }
+  h6 { font-size: 1.0em; font-weight: bold; color: #000080; }
+  
+  
+  
+  /***********************************************/
+  /* General                                */
+  /***********************************************/
+  
+  .clearfloat { clear: both; height:0; font-size: 1px; line-height: 0px; }
+  
+  ul { list-style-type: square; }

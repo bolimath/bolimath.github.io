@@ -1,0 +1,1077 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CodeKernel-GitSearch</title>
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-ad7f50e96220e5268a6bd3b51fa4db00cdb722f41d8dca6a7ee1572b2d9fb60f.css" media="all" rel="stylesheet" />
+<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-9f11074052a3551cd7bae2fba8b949844d2d7329927a7f1cb5a2c2a821f016e0.css" media="all" rel="stylesheet" />
+</head><body class="logged_in  env-production windows">
+<div class="code-list"><br>
+<div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/felix/blob/bffb01c2e4d8c21cd6d72d4d6e8cdaf4711c0972/upnp/basedriver/src/main/java/org/apache/felix/upnp/basedriver/util/Converter.java>https://github.com/apache/felix/blob/bffb01c2e4d8c21cd6d72d4d6e8cdaf4711c0972/upnp/basedriver/src/main/java/org/apache/felix/upnp/basedriver/util/Converter.java</a>[from <a href="getdatetime\cluster0.html">70 instances</a>]</p>Centrality&darr;:68.99999898718343&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Converter.parseString</font><font color="#000000">(</font><font color="#000000">String&nbsp;value,String&nbsp;upnpType</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>time</em>&#34;</font><font color="#000000">)){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000"><em>time</em>Formats=</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">[]{</font><font color="#2a00ff">&#34;HH:mm:ss&#34;</font><font color="#000000">}</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;d=<em>get</em><em>date</em>Value</font><font color="#000000">(</font><font color="#000000">value,<em>time</em>Formats,<em>time</em>Formats</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;c&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.set<em>time</em></font><font color="#000000">(</font><font color="#000000">d</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Long</font><font color="#000000">(</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.HOUR_OF_DAY</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">3600000</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">60000</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.SECOND</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">1000</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>time</em>.tz&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000"><em>time</em>Formats=</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">[]{</font><font color="#2a00ff">&#34;HH:mm:ssZ&#34;</font><font color="#000000">,</font><font color="#2a00ff">&#34;HH:mm:ss&#34;</font><font color="#000000">}</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;d=<em>get</em><em>date</em>Value</font><font color="#000000">(</font><font color="#000000">value,<em>time</em>Formats,<em>time</em>Formats</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>time</em>Zone&nbsp;tz&nbsp;=&nbsp;<em>time</em>Zone.<em>get</em>Default</font><font color="#000000">()</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;c&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">(</font><font color="#000000">tz</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.set<em>time</em></font><font color="#000000">(</font><font color="#000000">d</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if</b></font><font color="#000000">(</font><font color="#000000"><em>time</em>Formats</font><font color="#000000">[</font><font color="#990000">0</font><font color="#000000">]</font><font color="#000000">.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;HH:mm:ssZ&#34;</font><font color="#000000">)</font><font color="#000000">&amp;&amp;</font><font color="#000000">(</font><font color="#000000">tz.inDaylight<em>time</em></font><font color="#000000">(</font><font color="#000000">d</font><font color="#000000">)))</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.add</font><font color="#000000">(</font><font color="#000000">Calendar.MILLISECOND,</font><font color="#990000">3600000</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Long</font><font color="#000000">(</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.HOUR_OF_DAY</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">3600000</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">60000</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">+c.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.SECOND</font><font color="#000000">)</font><font color="#000000">*</font><font color="#990000">1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;r4&#34;</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;float&#34;</font><font color="#000000">))&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Float</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;r8&#34;</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;number&#34;</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">||&nbsp;upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;fixed.14.4&#34;</font><font color="#000000">)){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Double</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;char&#34;</font><font color="#000000">))&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;new&nbsp;</b></font><font color="#000000">Character</font><font color="#000000">(</font><font color="#000000">value.charAt</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;string&#34;</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;uri&#34;</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">||&nbsp;upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;uuid&#34;</font><font color="#000000">))&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">value;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>date</em>&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000"><em>time</em>Formats=</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">[]{</font><font color="#2a00ff">&#34;yyyy-MM-dd&#34;</font><font color="#000000">}</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;d=<em>get</em><em>date</em>Value</font><font color="#000000">(</font><font color="#000000">value,<em>time</em>Formats,<em>time</em>Formats</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">d;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>date</em><em>time</em>&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000"><em>time</em>Formats=</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">[]{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;yyyy-MM-dd&#34;</font><font color="#000000">,</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;yyyy-MM-dd'T'HH:mm:ss&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;d=<em>get</em><em>date</em>Value</font><font color="#000000">(</font><font color="#000000">value,<em>time</em>Formats,<em>time</em>Formats</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">d;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>date</em><em>time</em>.tz&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000"><em>time</em>Formats=</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">String</font><font color="#000000">[]{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;yyyy-MM-dd&#34;</font><font color="#000000">,</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;yyyy-MM-dd'T'HH:mm:ss&#34;</font><font color="#000000">,</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;yyyy-MM-dd'T'HH:mm:ssZ&#34;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;d=<em>get</em><em>date</em>Value</font><font color="#000000">(</font><font color="#000000">value,<em>time</em>Formats,<em>time</em>Formats</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">d;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;boolean&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if</b></font><font color="#000000">(</font><font color="#000000">value.equalsIgnoreCase</font><font color="#000000">(</font><font color="#2a00ff">&#34;yes&#34;</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;value.equalsIgnoreCase</font><font color="#000000">(</font><font color="#2a00ff">&#34;true&#34;</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">||&nbsp;value.equalsIgnoreCase</font><font color="#000000">(</font><font color="#2a00ff">&#34;1&#34;</font><font color="#000000">))</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">Boolean.TRUE;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else</b></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">Boolean.FALSE;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;bin.base64&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">Base64.decode</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">upnpType.equals</font><font color="#000000">(</font><font color="#2a00ff">&#34;bin.hex&#34;</font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">HexBin.decode</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/SecurityGroupUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/SecurityGroupUsageParser.java</a>[from <a href="getdatetime\cluster1.html">9 instances</a>]</p>Centrality&darr;:7.96199547323883&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SecurityGroupUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">7</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">sgCreate<em>date</em>.after</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//Ignore&nbsp;records&nbsp;created&nbsp;after&nbsp;end<em>date</em></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>continue</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">currentDuration&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">sgDelete<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;sgCreate<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">1</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;make&nbsp;sure&nbsp;this&nbsp;is&nbsp;an&nbsp;inclusive&nbsp;check&nbsp;for&nbsp;milliseconds&nbsp;(i.e.&nbsp;use&nbsp;n&nbsp;-&nbsp;m&nbsp;+&nbsp;1&nbsp;to&nbsp;find&nbsp;total&nbsp;number&nbsp;of&nbsp;millis&nbsp;to&nbsp;charge)</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/LoadBalancerUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/LoadBalancerUsageParser.java</a>[from <a href="getdatetime\cluster2.html">8 instances</a>]</p>Centrality&darr;:6.999236619605368&nbsp; Specificity&uarr;:2.207276647028654
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">LoadBalancerUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">6</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">up<em>date</em>LBUsageData</font><font color="#000000">(</font><font color="#000000">usageMap,&nbsp;key,&nbsp;usageLB.<em>get</em>Id</font><font color="#000000">()</font><font color="#000000">,&nbsp;currentDuration</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">String&nbsp;lbIdKey&nbsp;:&nbsp;usageMap.keySet</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Pair&lt;Long,&nbsp;Long&gt;&nbsp;sg<em>time</em>Info&nbsp;=&nbsp;usageMap.<em>get</em></font><font color="#000000">(</font><font color="#000000">lbIdKey</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">use<em>time</em>&nbsp;=&nbsp;sg<em>time</em>Info.second</font><font color="#000000">()</font><font color="#000000">.longValue</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Only&nbsp;create&nbsp;a&nbsp;usage&nbsp;record&nbsp;if&nbsp;we&nbsp;have&nbsp;a&nbsp;running<em>time</em>&nbsp;of&nbsp;bigger&nbsp;than&nbsp;zero.</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">use<em>time</em>&nbsp;&gt;&nbsp;</font><font color="#990000">0L</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">LBInfo&nbsp;info&nbsp;=&nbsp;lbMap.<em>get</em></font><font color="#000000">(</font><font color="#000000">lbIdKey</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">createUsageRecord</font><font color="#000000">(</font><font color="#000000">Usa<em>get</em>ypes.LOAD_BALANCER_POLICY,&nbsp;use<em>time</em>,&nbsp;start<em>date</em>,&nbsp;end<em>date</em>,&nbsp;account,&nbsp;info.<em>get</em>Id</font><font color="#000000">()</font><font color="#000000">,&nbsp;info.<em>get</em>ZoneId</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/syncope/blob/8cc3ffc1feba36af7414c380b6ac833662b58f73/common/lib/src/main/java/org/apache/syncope/common/lib/to/AbstractStartEndBean.java>https://github.com/apache/syncope/blob/8cc3ffc1feba36af7414c380b6ac833662b58f73/common/lib/src/main/java/org/apache/syncope/common/lib/to/AbstractStartEndBean.java</a>[from <a href="getdatetime\cluster3.html">7 instances</a>]</p>Centrality&darr;:5.976609097295164&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">AbstractStartEndBean.setStart<em>date</em></font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;start<em>date</em></font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">start<em>date</em>&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.start<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">(</font><font color="#000000">start<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/servlet/TestV2SLAServlet.java>https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/servlet/TestV2SLAServlet.java</a>[from <a href="getdatetime\cluster4.html">6 instances</a>]</p>Centrality&darr;:4.999999692035835&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestV2SLAServlet.testBundleSLA</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">9</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;-</font><font color="#990000">12</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;</font><font color="#3f7f5f">//current&nbsp;-12</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;actualStartForMet&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;</font><font color="#990000">2</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//current&nbsp;-10</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;expectedStart&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//current&nbsp;-9</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;actualStartForMiss&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;</font><font color="#990000">3</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//current&nbsp;-6</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;actualEndForMet&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//current&nbsp;-5</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;expectedEnd&nbsp;=&nbsp;cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cxf/blob/afd70f562f769c1f1ed26a275cbb3763b24cba43/services/sts/sts-core/src/test/java/org/apache/cxf/sts/token/provider/SAMLProviderLifetimeTest.java>https://github.com/apache/cxf/blob/afd70f562f769c1f1ed26a275cbb3763b24cba43/services/sts/sts-core/src/test/java/org/apache/cxf/sts/token/provider/SAMLProviderLifetimeTest.java</a>[from <a href="getdatetime\cluster5.html">6 instances</a>]</p>Centrality&darr;:4.977301262613723&nbsp; Specificity&uarr;:0.6385500076446677
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SAMLProviderLife<em>time</em>Test.testSaml2NearFutureCreatedLife<em>time</em></font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">4</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">expiration<em>time</em>.set<em>time</em></font><font color="#000000">(</font><font color="#000000">creation<em>time</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#000000">(</font><font color="#000000">requestedLife<em>time</em>&nbsp;*&nbsp;</font><font color="#990000">1000L</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">creation<em>time</em>.set<em>time</em></font><font color="#000000">(</font><font color="#000000">creation<em>time</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#000000">(</font><font color="#990000">10&nbsp;</font><font color="#000000">*&nbsp;</font><font color="#990000">1000L</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageLoadBalancerPolicyDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageLoadBalancerPolicyDaoImpl.java</a>[from <a href="getdatetime\cluster6.html">6 instances</a>]</p>Centrality&darr;:4.999954600070238&nbsp; Specificity&uarr;:1.4715177646857693
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageLoadBalancerPolicyDaoImpl.<em>get</em>UsageRecords</font><font color="#000000">(</font><font color="#000000">Long&nbsp;accountId,Long&nbsp;domainId,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em>,boolean&nbsp;limit,int&nbsp;page</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;start<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#000000">i++,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;end<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ResultSet&nbsp;rs&nbsp;=&nbsp;pstmt.executeQuery</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>while&nbsp;</b></font><font color="#000000">(</font><font color="#000000">rs.next</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//id,&nbsp;zone_id,&nbsp;account_id,&nbsp;domain_id,&nbsp;created,&nbsp;deleted</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;lbId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;zoneId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;acctId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Long&nbsp;dId&nbsp;=&nbsp;Long.valueOf</font><font color="#000000">(</font><font color="#000000">rs.<em>get</em>Long</font><font color="#000000">(</font><font color="#990000">4</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;created<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;deleted<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;createdTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;deletedTS&nbsp;=&nbsp;rs.<em>get</em>String</font><font color="#000000">(</font><font color="#990000">6</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">createdTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">created<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;createdTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">deletedTS&nbsp;!=&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">deleted<em>date</em>&nbsp;=&nbsp;<em>date</em>Util.parse<em>date</em>String</font><font color="#000000">(</font><font color="#000000">s_gmt<em>time</em>Zone,&nbsp;deletedTS</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff"></font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">usageRecords.add</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">UsageLoadBalancerPolicyVO</font><font color="#000000">(</font><font color="#000000">lbId,&nbsp;zoneId,&nbsp;acctId,&nbsp;dId,&nbsp;created<em>date</em>,&nbsp;deleted<em>date</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVPNUserDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVPNUserDaoImpl.java</a>[from <a href="getdatetime\cluster7.html">6 instances</a>]</p>Centrality&darr;:4.9999431036703506&nbsp; Specificity&uarr;:1.4715177646857693
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageVPNUserDaoImpl.up<em>date</em></font><font color="#000000">(</font><font color="#000000">UsageVPNUserVO&nbsp;usage</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;usage.<em>get</em>Deleted</font><font color="#000000">()))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setLong</font><font color="#000000">(</font><font color="#990000">2</font><font color="#000000">,&nbsp;usage.<em>get</em>AccountId</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setLong</font><font color="#000000">(</font><font color="#990000">3</font><font color="#000000">,&nbsp;usage.<em>get</em>UserId</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.executeUp<em>date</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/incubator-kylin/blob/124121764a3eb0652032c8add97f02708aa5fd3a/cube/src/main/java/org/apache/kylin/cube/model/v1/CubeSegment.java>https://github.com/apache/incubator-kylin/blob/124121764a3eb0652032c8add97f02708aa5fd3a/cube/src/main/java/org/apache/kylin/cube/model/v1/CubeSegment.java</a>[from <a href="getdatetime\cluster8.html">5 instances</a>]</p>Centrality&darr;:3.9996296580525654&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">CubeSegment.<em>get</em>SegmentName</font><font color="#000000">(</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">start<em>date</em>,long&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>Format.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000"><em>date</em>Format.format</font><font color="#000000">(</font><font color="#000000">start<em>date</em></font><font color="#000000">)&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">&#34;_&#34;&nbsp;</font><font color="#000000">+&nbsp;<em>date</em>Format.format</font><font color="#000000">(</font><font color="#000000">end<em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/tomcat60/blob/e937f5764eca24148fa5714dee7ce865d6a28a53/java/org/apache/catalina/valves/AccessLogValve.java>https://github.com/apache/tomcat60/blob/e937f5764eca24148fa5714dee7ce865d6a28a53/java/org/apache/catalina/valves/AccessLogValve.java</a>[from <a href="getdatetime\cluster9.html">4 instances</a>]</p>Centrality&darr;:2.995042495645976&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">AccessLogValve.Access<em>date</em>Struct</font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>time</em>Zone&nbsp;tz&nbsp;=&nbsp;<em>time</em>Zone.<em>get</em>Default</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">dayFormatter.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000">tz</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">monthFormatter.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000">tz</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">yearFormatter.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000">tz</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>time</em>Formatter.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000">tz</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/james-imap/blob/15d89391f2971628358bf7dd3002cddc4886cd15/message/src/test/java/org/apache/james/imap/decode/DecoderUtilsTest.java>https://github.com/apache/james-imap/blob/15d89391f2971628358bf7dd3002cddc4886cd15/message/src/test/java/org/apache/james/imap/decode/DecoderUtilsTest.java</a>[from <a href="getdatetime\cluster10.html">4 instances</a>]</p>Centrality&darr;:2.9999999999948908&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">DecoderUtilsTest.testDecode<em>date</em><em>time</em></font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT+0&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT+1&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT-1&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT+2&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT-2&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">run<em>time</em>ZoneTest</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT+3&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/lens/blob/3dc348ac2793b5394f0ef58bba6da6f9933c5e1d/lens-cube/src/test/java/org/apache/lens/cube/parse/TestTimeRangeWriterWithQuery.java>https://github.com/apache/lens/blob/3dc348ac2793b5394f0ef58bba6da6f9933c5e1d/lens-cube/src/test/java/org/apache/lens/cube/parse/TestTimeRangeWriterWithQuery.java</a>[from <a href="getdatetime\cluster11.html">4 instances</a>]</p>Centrality&darr;:2.9984171927786405&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Test<em>time</em>RangeWriterWithQuery.<em>get</em>OneLess</font><font color="#000000">(</font><font color="#000000"><em>date</em>&nbsp;in,int&nbsp;calField</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000">in</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">calField,&nbsp;-</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">cal.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/incubator-groovy/blob/6fe6b31816e43ae3408e2dfdbf2d2bad1a9791c0/src/main/groovy/time/TimeCategory.java>https://github.com/apache/incubator-groovy/blob/6fe6b31816e43ae3408e2dfdbf2d2bad1a9791c0/src/main/groovy/time/TimeCategory.java</a>[from <a href="getdatetime\cluster12.html">4 instances</a>]</p>Centrality&darr;:2.8506387948964083&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>time</em>Category.minus</font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;<em>date</em>,final&nbsp;BaseDuration&nbsp;duration</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000"><em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/incubator-geode/blob/b205339a0c567073906936afe08ae3003c341c0a/gemfire-core/src/test/java/com/gemstone/gemfire/internal/cache/partitioned/fixed/MyDate1.java>https://github.com/apache/incubator-geode/blob/b205339a0c567073906936afe08ae3003c341c0a/gemfire-core/src/test/java/com/gemstone/gemfire/internal/cache/partitioned/fixed/MyDate1.java</a>[from <a href="getdatetime\cluster13.html">4 instances</a>]</p>Centrality&darr;:2.988304548647582&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">My<em>date</em>1.<em>get</em>RoutingObject</font><font color="#000000">(</font><font color="#000000">EntryOperation&nbsp;opDetails</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000"><em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">month&nbsp;=&nbsp;cal.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.MONTH</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/pig/blob/532321edae2a6bb9103e4d55d31ba570e87e648d/src/org/apache/pig/builtin/ToDateISO.java>https://github.com/apache/pig/blob/532321edae2a6bb9103e4d55d31ba570e87e648d/src/org/apache/pig/builtin/ToDateISO.java</a>[from <a href="getdatetime\cluster14.html">4 instances</a>]</p>Centrality&darr;:2.9999938534475463&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">To<em>date</em>ISO.exec</font><font color="#000000">(</font><font color="#000000">Tuple&nbsp;input</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">input&nbsp;==&nbsp;</font><font color="#7f0055"><b>null&nbsp;</b></font><font color="#000000">||&nbsp;input.size</font><font color="#000000">()&nbsp;</font><font color="#000000">&lt;&nbsp;</font><font color="#990000">1&nbsp;</font><font color="#000000">||&nbsp;input.<em>get</em></font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">)&nbsp;</font><font color="#000000">==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;null</b></font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;dtStr&nbsp;=&nbsp;DataType.toString</font><font color="#000000">(</font><font color="#000000">input.<em>get</em></font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">To<em>date</em>.extract<em>date</em><em>time</em></font><font color="#000000">(</font><font color="#000000">dtStr</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/jena/blob/31a8cce9e26e46526613c2ca550c900c3dcb4b34/jena-core/src/main/java/org/apache/jena/datatypes/xsd/impl/XSDTimeType.java>https://github.com/apache/jena/blob/31a8cce9e26e46526613c2ca550c900c3dcb4b34/jena-core/src/main/java/org/apache/jena/datatypes/xsd/impl/XSDTimeType.java</a>[from <a href="getdatetime\cluster15.html">4 instances</a>]</p>Centrality&darr;:2.9972643541033364&nbsp; Specificity&uarr;:0.7357588823428847
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">XSD<em>time</em>Type.parseVali<em>date</em>d</font><font color="#000000">(</font><font color="#000000">String&nbsp;str</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>get</em><em>time</em></font><font color="#000000">(</font><font color="#000000">str,&nbsp;</font><font color="#990000">0</font><font color="#000000">,&nbsp;len,&nbsp;<em>date</em>,&nbsp;<em>time</em>Zone</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(&nbsp;</font><font color="#000000"><em>date</em></font><font color="#000000">[</font><font color="#000000">utc</font><font color="#000000">]</font><font color="#000000">!=</font><font color="#990000">0&nbsp;</font><font color="#000000">&amp;&amp;&nbsp;<em>date</em></font><font color="#000000">[</font><font color="#000000">utc</font><font color="#000000">]</font><font color="#000000">!=</font><font color="#990000">'Z'&nbsp;</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Abstract<em>date</em><em>time</em>.normalize</font><font color="#000000">(</font><font color="#000000"><em>date</em>,&nbsp;<em>time</em>Zone</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/commons-compress/blob/cb39bb9f57af6320db4e649d3fce91f68e43bd1f/src/main/java/org/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry.java>https://github.com/apache/commons-compress/blob/cb39bb9f57af6320db4e649d3fce91f68e43bd1f/src/main/java/org/apache/commons/compress/archivers/sevenz/SevenZArchiveEntry.java</a>[from <a href="getdatetime\cluster16.html">4 instances</a>]</p>Centrality&darr;:2.9925637434700008&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SevenZArchiveEntry.java<em>time</em>ToNtfs<em>time</em></font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ntfsEpoch.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT+0&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ntfsEpoch.set</font><font color="#000000">(</font><font color="#000000">Calendar.MILLISECOND,&nbsp;</font><font color="#990000">0</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">((</font><font color="#000000"><em>date</em>.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">-&nbsp;ntfsEpoch.<em>get</em><em>time</em>InMillis</font><font color="#000000">())</font><font color="#000000">*&nbsp;</font><font color="#990000">1000&nbsp;</font><font color="#000000">*&nbsp;</font><font color="#990000">10</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/test/java/org/apache/isis/viewer/wicket/ui/components/scalars/jodatime/DateConverterForJodaDateTimeTest.java>https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/viewer-wicket/ui/src/test/java/org/apache/isis/viewer/wicket/ui/components/scalars/jodatime/DateConverterForJodaDateTimeTest.java</a>[from <a href="getdatetime\cluster17.html">4 instances</a>]</p>Centrality&darr;:2.8506387948964083&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>ConverterForJoda<em>date</em><em>time</em>Test.setUp</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/nifi/blob/3e7fe93fdb7e4253e3bfa30bd2dcdd58fb64e525/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-client-dto/src/main/java/org/apache/nifi/web/api/dto/util/DateTimeAdapter.java>https://github.com/apache/nifi/blob/3e7fe93fdb7e4253e3bfa30bd2dcdd58fb64e525/nifi-nar-bundles/nifi-framework-bundle/nifi-framework/nifi-client-dto/src/main/java/org/apache/nifi/web/api/dto/util/DateTimeAdapter.java</a>[from <a href="getdatetime\cluster18.html">3 instances</a>]</p>Centrality&darr;:1.9907833008242481&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em><em>time</em>Adapter.unmarshal</font><font color="#000000">(</font><font color="#000000">String&nbsp;<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">parser.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em>Default</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">parser.parse</font><font color="#000000">(</font><font color="#000000"><em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/camel/blob/b378bcdedfbd0ac375d052ca4dccdbad6bed1ce9/components/camel-leveldb/src/test/java/org/apache/camel/component/leveldb/LevelDBExchangeSerializationTest.java>https://github.com/apache/camel/blob/b378bcdedfbd0ac375d052ca4dccdbad6bed1ce9/components/camel-leveldb/src/test/java/org/apache/camel/component/leveldb/LevelDBExchangeSerializationTest.java</a>[from <a href="getdatetime\cluster19.html">3 instances</a>]</p>Centrality&darr;:2.0&nbsp; Specificity&uarr;:2.110067772330437
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">LevelDBExchangeSerializationTest.testExchangeSerialization</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">repo.add</font><font color="#000000">(</font><font color="#000000">context,&nbsp;</font><font color="#2a00ff">&#34;foo&#34;</font><font color="#000000">,&nbsp;exchange</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Exchange&nbsp;actual&nbsp;=&nbsp;repo.<em>get</em></font><font color="#000000">(</font><font color="#000000">context,&nbsp;</font><font color="#2a00ff">&#34;foo&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">&#34;Hello&nbsp;World&#34;</font><font color="#000000">,&nbsp;actual.<em>get</em>In</font><font color="#000000">()</font><font color="#000000">.<em>get</em>Body</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">&#34;Claus&#34;</font><font color="#000000">,&nbsp;actual.<em>get</em>In</font><font color="#000000">()</font><font color="#000000">.<em>get</em>Header</font><font color="#000000">(</font><font color="#2a00ff">&#34;name&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#990000">123</font><font color="#000000">,&nbsp;actual.<em>get</em>In</font><font color="#000000">()</font><font color="#000000">.<em>get</em>Header</font><font color="#000000">(</font><font color="#2a00ff">&#34;number&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;<em>date</em>&nbsp;=&nbsp;actual.<em>get</em>In</font><font color="#000000">()</font><font color="#000000">.<em>get</em>Header</font><font color="#000000">(</font><font color="#2a00ff">&#34;<em>date</em>&#34;</font><font color="#000000">,&nbsp;<em>date</em>.</font><font color="#7f0055"><b>class</b></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertNotNull</font><font color="#000000">(</font><font color="#000000"><em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">now.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;<em>date</em>.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/rampart/blob/9a36b6b4102fd39ff62bbd65d8ce0c2c42502e60/modules/kernel/src/org/apache/axis2/util/UUIDGenerator.java>https://github.com/apache/rampart/blob/9a36b6b4102fd39ff62bbd65d8ce0c2c42502e60/modules/kernel/src/org/apache/axis2/util/UUIDGenerator.java</a>[from <a href="getdatetime\cluster20.html">3 instances</a>]</p>Centrality&darr;:1.9990881028044658&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UUIDGenerator.main</font><font color="#000000">(</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000">args</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">1</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>long&nbsp;</b></font><font color="#000000">end<em>time</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">start<em>time</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/jclouds/blob/180a61e85e1c744faa94df7efa8182af6caabe30/apis/cloudwatch/src/test/java/org/jclouds/cloudwatch/options/ListAlarmHistoryOptionsTest.java>https://github.com/apache/jclouds/blob/180a61e85e1c744faa94df7efa8182af6caabe30/apis/cloudwatch/src/test/java/org/jclouds/cloudwatch/options/ListAlarmHistoryOptionsTest.java</a>[from <a href="getdatetime\cluster21.html">3 instances</a>]</p>Centrality&darr;:1.9975211352881588&nbsp; Specificity&uarr;:0.6385500076446677
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">ListAlarmHistoryOptionsTest.testPopulatedOptions</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;end<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">()&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#990000">5000</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;start<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/metamodel/src/main/java/org/apache/isis/core/metamodel/facets/value/dateutil/JavaUtilDateValueSemanticsProvider.java>https://github.com/apache/isis/blob/a106383e34899a67605c1192d18254b2e70f1716/core/metamodel/src/main/java/org/apache/isis/core/metamodel/facets/value/dateutil/JavaUtilDateValueSemanticsProvider.java</a>[from <a href="getdatetime\cluster22.html">3 instances</a>]</p>Centrality&darr;:1.9998311902661507&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">JavaUtil<em>date</em>ValueSemanticsProvider.add</font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000"><em>date</em>&nbsp;original,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">years,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">months,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">days,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">hours,final&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">minutes</font><font color="#000000">){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Calendar&nbsp;cal&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000"><em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set</font><font color="#000000">(</font><font color="#000000">Calendar.MILLISECOND,&nbsp;</font><font color="#990000">0</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.add</font><font color="#000000">(</font><font color="#000000">Calendar.MINUTE,&nbsp;minutes</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">set<em>date</em></font><font color="#000000">(</font><font color="#000000">cal.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/0d497504e2ff016f3641de04dd2fb7acd31192de/core/src/test/java/org/apache/oozie/command/coord/TestCoordCommandUtils.java>https://github.com/apache/oozie/blob/0d497504e2ff016f3641de04dd2fb7acd31192de/core/src/test/java/org/apache/oozie/command/coord/TestCoordCommandUtils.java</a>[from <a href="getdatetime\cluster23.html">3 instances</a>]</p>Centrality&darr;:1.999876590195913&nbsp; Specificity&uarr;:1.4715177646857693
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">TestCoordCommandUtils.test<em>get</em>NextValidAction<em>time</em></font><font color="#000000">(){</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;end<em>time</em>&nbsp;=&nbsp;<em>date</em>Utils.parse<em>date</em>OozieTZ</font><font color="#000000">(</font><font color="#2a00ff">&#34;2013-07-18T01:00Z&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">CoordinatorJobBean&nbsp;job&nbsp;=&nbsp;addRecordToCoordJobTable</font><font color="#000000">(</font><font color="#000000">CoordinatorJob.Status.RUNNING,&nbsp;start<em>time</em>,&nbsp;end<em>time</em>,</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">&#34;10,20&nbsp;*&nbsp;*&nbsp;*&nbsp;*&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;expected<em>date</em>&nbsp;=&nbsp;<em>date</em>Utils.parse<em>date</em>OozieTZ</font><font color="#000000">(</font><font color="#2a00ff">&#34;2013-07-18T00:20Z&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>&nbsp;ret<em>date</em>&nbsp;=&nbsp;CoordCommandUtils.<em>get</em>NextValidAction<em>time</em>ForCronFrequency</font><font color="#000000">(</font><font color="#000000">action<em>time</em>,&nbsp;job</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">expected<em>date</em>,&nbsp;ret<em>date</em></font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">job&nbsp;=&nbsp;addRecordToCoordJobTable</font><font color="#000000">(</font><font color="#000000">CoordinatorJob.Status.RUNNING,&nbsp;start<em>time</em>,&nbsp;end<em>time</em>,&nbsp;</font><font color="#2a00ff">&#34;10/20&nbsp;*&nbsp;*&nbsp;5-7&nbsp;4,5&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">expected<em>date</em>&nbsp;=&nbsp;<em>date</em>Utils.parse<em>date</em>OozieTZ</font><font color="#000000">(</font><font color="#2a00ff">&#34;2013-07-18T00:30Z&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VPNUserUsageParser.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/usage/src/com/cloud/usage/parser/VPNUserUsageParser.java</a>[from <a href="getdatetime\cluster24.html">3 instances</a>]</p>Centrality&darr;:1.9997531803918267&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">VPNUserUsageParser.parse</font><font color="#000000">(</font><font color="#000000">AccountVO&nbsp;account,<em>date</em>&nbsp;start<em>date</em>,<em>date</em>&nbsp;end<em>date</em></font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">10</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">((</font><font color="#000000">end<em>date</em>&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;end<em>date</em>.after</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">end<em>date</em>&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000"><em>date</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/olingo-odata4/blob/dbf649e0b170dc58647ca65fbd7700cf2bde3147/lib/commons-core/src/main/java/org/apache/olingo/commons/core/edm/primitivetype/EdmDateTimeOffset.java>https://github.com/apache/olingo-odata4/blob/dbf649e0b170dc58647ca65fbd7700cf2bde3147/lib/commons-core/src/main/java/org/apache/olingo/commons/core/edm/primitivetype/EdmDateTimeOffset.java</a>[from <a href="getdatetime\cluster25.html">3 instances</a>]</p>Centrality&darr;:1.9999665965984195&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Edm<em>date</em><em>time</em>Offset.internalValueOfString</font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">String&nbsp;value,final&nbsp;Boolean&nbsp;isNullable,final&nbsp;Integer&nbsp;maxLength,final&nbsp;Integer&nbsp;precision,final&nbsp;Integer&nbsp;scale,final&nbsp;Boolean&nbsp;isUnicode,final&nbsp;Class&lt;T&gt;&nbsp;returnType</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">returnType.isAssignableFrom</font><font color="#000000">(</font><font color="#000000"><em>time</em>stamp.</font><font color="#7f0055"><b>class</b></font><font color="#000000">))&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">!decimals.isEmpty</font><font color="#000000">())&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">nanoSeconds&nbsp;=&nbsp;Integer.parseInt</font><font color="#000000">(</font><font color="#000000">decimals.length</font><font color="#000000">()&nbsp;</font><font color="#000000">&gt;&nbsp;</font><font color="#990000">9&nbsp;</font><font color="#000000">?&nbsp;decimals.substring</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">9</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">:&nbsp;decimals&nbsp;+&nbsp;</font><font color="#2a00ff">&#34;000000000&#34;</font><font color="#000000">.substring</font><font color="#000000">(</font><font color="#000000">decimals.length</font><font color="#000000">()))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else&nbsp;</b></font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">String&nbsp;milliSeconds&nbsp;=&nbsp;decimals.length</font><font color="#000000">()&nbsp;</font><font color="#000000">&gt;&nbsp;</font><font color="#990000">3</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">?&nbsp;decimals.substring</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">3</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">:&nbsp;decimals&nbsp;+&nbsp;</font><font color="#2a00ff">&#34;000&#34;</font><font color="#000000">.substring</font><font color="#000000">(</font><font color="#000000">decimals.length</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em><em>time</em>Value.set</font><font color="#000000">(</font><font color="#000000">Calendar.MILLISECOND,&nbsp;Short.parseShort</font><font color="#000000">(</font><font color="#000000">milliSeconds</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/util/TestDateUtils.java>https://github.com/apache/oozie/blob/48b64bc9438137517e24b37b674c5a8893db67c3/core/src/test/java/org/apache/oozie/util/TestDateUtils.java</a>[from <a href="getdatetime\cluster26.html">3 instances</a>]</p>Centrality&darr;:1.9907833008242481&nbsp; Specificity&uarr;:0.2706705664732254
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Test<em>date</em>Utils.test<em>get</em><em>time</em>ZoneValidFormats</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertEquals</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;PST&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;<em>date</em>Utils.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;PST&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Assert.assertEquals</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;<em>date</em>Utils.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/zookeeper/blob/10150af10a78ed95707ca02044c6940499bbb416/src/java/test/org/apache/zookeeper/common/TimeTest.java>https://github.com/apache/zookeeper/blob/10150af10a78ed95707ca02044c6940499bbb416/src/java/test/org/apache/zookeeper/common/TimeTest.java</a>[from <a href="getdatetime\cluster27.html">3 instances</a>]</p>Centrality&darr;:1.9998311902661507&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>time</em>Test.testElapsed<em>time</em>To<em>date</em></font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">cal.set<em>time</em></font><font color="#000000">(</font><font color="#000000"><em>time</em>.elapsed<em>time</em>To<em>date</em></font><font color="#000000">(</font><font color="#000000">elapsed<em>time</em></font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">calculated<em>date</em>&nbsp;=&nbsp;cal.<em>get</em></font><font color="#000000">(</font><font color="#000000">Calendar.HOUR_OF_DAY</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/openoffice/blob/54618646387613cec3f42ec41455c7dd59c4a94b/main/reportbuilder/java/com/sun/star/report/SDBCReportData.java>https://github.com/apache/openoffice/blob/54618646387613cec3f42ec41455c7dd59c4a94b/main/reportbuilder/java/com/sun/star/report/SDBCReportData.java</a>[from <a href="getdatetime\cluster28.html">3 instances</a>]</p>Centrality&darr;:1.997397838019247&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">SDBCReportData.<em>get</em><em>date</em></font><font color="#000000">(</font><font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Object&nbsp;obj</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/tajo/blob/dfcf41d6f66044b15f478bb22feecccfdf742628/tajo-core/src/main/java/org/apache/tajo/engine/function/datetime/DatePartFromDate.java>https://github.com/apache/tajo/blob/dfcf41d6f66044b15f478bb22feecccfdf742628/tajo-core/src/main/java/org/apache/tajo/engine/function/datetime/DatePartFromDate.java</a>[from <a href="getdatetime\cluster29.html">3 instances</a>]</p>Centrality&darr;:1.9999544875350628&nbsp; Specificity&uarr;:0.503214724408055
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>PartFrom<em>date</em>.eval</font><font color="#000000">(</font><font color="#000000">Tuple&nbsp;params</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">2</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">params.isBlankOrNull</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;params.isBlankOrNull</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">)&nbsp;</font><font color="#000000">||&nbsp;params.type</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">)&nbsp;</font><font color="#000000">!=&nbsp;<em>date</em></font><font color="#000000">)&nbsp;{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">NullDatum.<em>get</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>time</em>Meta&nbsp;<em>time</em>Meta&nbsp;=&nbsp;params.<em>get</em><em>time</em><em>date</em></font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/oozie/blob/fcbab934096ff135e2001253f7208fa0405c1367/client/src/main/java/org/apache/oozie/client/rest/JsonUtils.java>https://github.com/apache/oozie/blob/fcbab934096ff135e2001253f7208fa0405c1367/client/src/main/java/org/apache/oozie/client/rest/JsonUtils.java</a>[from <a href="getdatetime\cluster30.html">3 instances</a>]</p>Centrality&darr;:1.9950424956466672&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">JsonUtils.parse<em>date</em>Rfc822</font><font color="#000000">(</font><font color="#000000">String&nbsp;str</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em>Formater.set<em>time</em>Zone</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000"><em>date</em>Formater.parse</font><font color="#000000">(</font><font color="#000000">str</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/olingo-odata4/blob/53881c2acf6f725b3e2d631ef083baf3cb225525/lib/commons-core/src/test/java/org/apache/olingo/commons/core/edm/primitivetype/EdmTimeOfDayTest.java>https://github.com/apache/olingo-odata4/blob/53881c2acf6f725b3e2d631ef083baf3cb225525/lib/commons-core/src/test/java/org/apache/olingo/commons/core/edm/primitivetype/EdmTimeOfDayTest.java</a>[from <a href="getdatetime\cluster31.html">3 instances</a>]</p>Centrality&darr;:1.900425863264272&nbsp; Specificity&uarr;:0.0
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Edm<em>time</em>OfDayTest.valueToString</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Calendar&nbsp;<em>date</em><em>time</em>&nbsp;=&nbsp;Calendar.<em>get</em>Instance</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000"><em>date</em><em>time</em>.clear</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/commons-lang/blob/0343b4fda87161265acf30d5ee61e525e751358d/src/test/java/org/apache/commons/lang3/time/DateFormatUtilsTest.java>https://github.com/apache/commons-lang/blob/0343b4fda87161265acf30d5ee61e525e751358d/src/test/java/org/apache/commons/lang3/time/DateFormatUtilsTest.java</a>[from <a href="getdatetime\cluster32.html">3 instances</a>]</p>Centrality&darr;:1.998176236068891&nbsp; Specificity&uarr;:0.1353352832366127
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000"><em>date</em>FormatUtilsTest.testFormat</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">5</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">buffer.toString</font><font color="#000000">()</font><font color="#000000">,&nbsp;<em>date</em>FormatUtils.format</font><font color="#000000">(</font><font color="#000000">c.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;yyyyMdH&#34;</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">buffer.toString</font><font color="#000000">()</font><font color="#000000">,&nbsp;<em>date</em>FormatUtils.format</font><font color="#000000">(</font><font color="#000000">c.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">&#34;yyyyMdH&#34;</font><font color="#000000">,&nbsp;Locale.US</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cayenne/blob/64a4171f1b79743791769741da1ee45c32c2253b/cayenne-joda/src/test/java/org/apache/cayenne/joda/access/types/LocalDateTypeTest.java>https://github.com/apache/cayenne/blob/64a4171f1b79743791769741da1ee45c32c2253b/cayenne-joda/src/test/java/org/apache/cayenne/joda/access/types/LocalDateTypeTest.java</a>[from <a href="getdatetime\cluster33.html">3 instances</a>]</p>Centrality&darr;:1.9975189874939265&nbsp; Specificity&uarr;:0.7738852908812804
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">Local<em>date</em>TypeTest.testSetJdbcObject</font><font color="#000000">()</font><font color="#000000">#</font><font color="#990000">3</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#000000">savedObject.to<em>date</em></font><font color="#000000">()</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">()</font><font color="#000000">,&nbsp;</font><font color="#000000">((</font><font color="#000000"><em>time</em>stamp</font><font color="#000000">)&nbsp;</font><font color="#000000">object</font><font color="#000000">)</font><font color="#000000">.<em>get</em><em>time</em></font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">type.setJdbcObject</font><font color="#000000">(</font><font color="#000000">statement,&nbsp;null,&nbsp;</font><font color="#990000">1</font><font color="#000000">,&nbsp;Types.<em>time</em>STAMP,&nbsp;</font><font color="#990000">0</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">object&nbsp;=&nbsp;</font><font color="#000000">((</font><font color="#000000">MockPreparedStatement</font><font color="#000000">)&nbsp;</font><font color="#000000">statement</font><font color="#000000">)</font><font color="#000000">.<em>get</em>Parameter</font><font color="#000000">(</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertNull</font><font color="#000000">(</font><font color="#000000">object</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div><div class="code-list-item code-list-item-public ">
+<p class="title"><a href=https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVMSnapshotDaoImpl.java>https://github.com/apache/cloudstack/blob/94f1ebb60af320166206c213e18b97a177bc145a/engine/schema/src/com/cloud/usage/dao/UsageVMSnapshotDaoImpl.java</a>[from <a href="getdatetime\cluster34.html">3 instances</a>]</p>Centrality&darr;:1.996609365857779&nbsp; Specificity&uarr;:0.36787944117144233
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = -->
+<!-- =   Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard  markus@jave.de   = -->
+<!-- =     Further information: http://www.java2html.de     = -->
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#000000">UsageVMSnapshotDaoImpl.up<em>date</em></font><font color="#000000">(</font><font color="#000000">UsageVMSnapshotVO&nbsp;usage</font><font color="#000000">)</font><font color="#000000">#</font><font color="#990000">0</font><font color="#000000">{</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.setString</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">,&nbsp;<em>date</em>Util.<em>get</em><em>date</em>DisplayString</font><font color="#000000">(</font><font color="#000000"><em>time</em>Zone.<em>get</em><em>time</em>Zone</font><font color="#000000">(</font><font color="#2a00ff">&#34;GMT&#34;</font><font color="#000000">)</font><font color="#000000">,&nbsp;usage.<em>get</em>Created</font><font color="#000000">()))</font><font color="#000000">;</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">pstmt.executeUp<em>date</em></font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#000000">}</font></code>
+    
+   </td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+<!-- =       END of automatically generated HTML code       = -->
+<!-- ======================================================== -->
+
+</div></div>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
