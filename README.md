@@ -1,2 +1,2 @@
-# guxd.github.io
+# bolimath.github.io
 Personal Web Page
