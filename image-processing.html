@@ -125,6 +125,8 @@
     </td>
 <td> 
     <a href="ImgPro_powerpoints/dip_Features.pdf">dip_Features.pdf</a>  
+   <a href="ImgPro_powerpoints/corner_detection.m">corner_detection.m</a>  
+</td>
 </td>
 <td>
   设计完整的边界检测函数，具体步骤如下：1. Smooth by gaussian filter, 2. Compute derivatives in x and y directions, 3. Find gradient magnitude
@@ -133,39 +135,8 @@
 </tr>
  <!--##########################################################-->   
 <tr>
-<td> %%
-sigma = 3;
-width = 3 * sigma;
-support = -width : width;
-gauss2D = exp( - (support / sigma).^2 / 2);
-gauss2D = gauss2D / sum(gauss2D)
-figure
-line(1:length(gauss2D),gauss2D)
-
-smooth = conv2(I, gauss2D, 'same');
-figure
-subplot(121)
-imshow(smooth,[]);
-
-gauss3D = gauss2D' * gauss2D;
-smooth = conv2(I,gauss3D, 'same');
-subplot(122)
-imshow(smooth,[])
-figure
-surf(gauss3D)
-
-figure;
-[dx,dy] = gradient(smooth);
-gradmag = sqrt(dx.^2 + dy.^2);
-gmax = max(max(gradmag))
-imshow(gradmag,[]);
-hold on
-
-[m,n] = size(I);
-edges = (gradmag > 0.3 * gmax);
-imshow(edges,[])
-unique(edges(:))
-
+<td> 
+  
 </td>
 <td>  
 </td>
