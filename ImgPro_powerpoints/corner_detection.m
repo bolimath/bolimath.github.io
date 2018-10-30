@@ -92,6 +92,9 @@ imshow(Iy,[])
 I_mag = sqrt(Ix.^2+Iy.^2);
 imshow(I_mag,[])
 
+edge_I = I_mag > 0.3*max(I_mag(:));
+imshow(edge_I,[])
+
 %% corner detection
 % Harris Corner detector - by Kashif Shahzad
 sigma=5; thresh=0.1; sze=11; disp=0;eps=0.0;
@@ -133,4 +136,44 @@ plot(p(:,1),p(:,2),'or'); % display corners as red circles
 title('\bf Harris Corners');
 
 
+
+
+%%Harris corner detection
+[m,n] = size(I);
+
+R=zeros(m,n);
+for i=1:m
+    for j=1:n
+        M=[Ix2(i,j) Ixy(i,j);Ixy(i,j) Iy2(i,j)];
+        R(i,j)=det(M)-0.06*(trace(M))^2;
+    end
+end
+Rmax = max(R(:))
+
+
+re=zeros(m+2,n+2);
+tmp = zeros(m+2, n+2); 
+tmp(2:m+1,2:n+1)=R;
+img_re=zeros(m+2,n+2);
+img_re(2:m+1,2:n+1)=I;
+
+for i=2:m+1
+    for j=2:n+1
+        
+        if tmp(i,j)>0.04*Rmax && ...
+           tmp(i,j)>tmp(i-1,j-1) && tmp(i,j)>tmp(i-1,j) && tmp(i,j)>tmp(i-1,j+1) &&...
+           tmp(i,j)>tmp(i,j-1) && tmp(i,j)>tmp(i,j+1) &&...
+           tmp(i,j)>tmp(i+1,j-1) && tmp(i,j)>tmp(i+1,j) && tmp(i,j)>tmp(i+1,j+1)
+                img_re(i,j)=255; 
+                re(i,j) = 1;
+        end   
+    end
+end
+
+re = mat2gray(re(2:m+1,2:n+1));
+img_re=mat2gray(img_re(2:m+1,2:n+1));
+figure,imshow(img_re);
+[cx,cy] = find(re);
+hold on
+plot(cy,cx,'r*')
 
