@@ -1,0 +1,26 @@
+作业2: 利用所学的图像滤波方法实现信号的去噪，分别在图像域（直接操作图像像素）和频率域（对傅立叶变换后的系数进行操作）给出实现的过程, 并提交具体算法和实验结果分析。
+
+%1d signal
+%generate a 1d signal
+name = 'piece-regular';
+n = 1024;
+x0 = load_signal(name,n);
+x0 = rescale(x0);
+
+%We add some noise to it.
+
+sigma = .04; % noise level
+x = x0 + sigma*randn(size(x0));
+clf;
+subplot(2,1,1);
+plot(x0); axis([1 n -.05 1.05]);
+subplot(2,1,2);
+plot(x); axis([1 n -.05 1.05]);
+
+
+
+
+
+%2d signal
+I = imread('rice.png');
+I_n = imnoise(I,'gaussian');
